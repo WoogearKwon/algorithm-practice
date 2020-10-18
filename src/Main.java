@@ -1,4 +1,4 @@
-import problems.KakaoCranePick;
+import problems.kakao.KakaoCranePick;
 import problems.Problem;
 
 import java.util.ArrayList;

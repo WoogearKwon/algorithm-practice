@@ -1,4 +1,6 @@
-package problems;
+package problems.kakao;
+
+import problems.Problem;
 
 import java.util.*;
 
