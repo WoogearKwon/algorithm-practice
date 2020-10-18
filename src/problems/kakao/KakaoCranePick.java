@@ -24,6 +24,7 @@ public class KakaoCranePick extends Problem {
         System.out.println(solution(board, moves));
     }
 
+    // My solution
     private int solution(int[][] board, int[] moves) {
         int answer = 0;
         Stack<Integer> box = new Stack<>();
@@ -64,5 +65,30 @@ public class KakaoCranePick extends Problem {
             }
         }
         return y;
+    }
+
+    // 추천수가 높은 다른 사람의 풀이(홍희표, 김재용)
+    private int solution2(int[][] board, int[] moves) {
+        int answer = 0;
+        Stack<Integer> stack = new Stack<>();
+        for (int move : moves) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[j][move - 1] != 0) {
+                    if (stack.isEmpty()) {
+                        stack.push(board[j][move - 1]);
+                        board[j][move - 1] = 0;
+                        break;
+                    }
+                    if (board[j][move - 1] == stack.peek()) {
+                        stack.pop();
+                        answer += 2;
+                    } else
+                        stack.push(board[j][move - 1]);
+                    board[j][move - 1] = 0;
+                    break;
+                }
+            }
+        }
+        return answer;
     }
 }
