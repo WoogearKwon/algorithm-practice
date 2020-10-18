@@ -9,11 +9,11 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/64061
  * */
 public class KakaoCranePick extends Problem {
-    private int number;
+    private int id;
 
-    public KakaoCranePick(int number) {
-        super(number);
-        this.number = number;
+    public KakaoCranePick(int id) {
+        super(id);
+        this.id = id;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class KakaoCranePick extends Problem {
     }
 
     // My solution
-    private int solution(int[][] board, int[] moves) {
+    public int solution(int[][] board, int[] moves) {
         int answer = 0;
         Stack<Integer> box = new Stack<>();
 

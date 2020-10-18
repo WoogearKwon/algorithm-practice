@@ -1,9 +1,9 @@
 package problems;
 
 public abstract class Problem implements Testable {
-    int number;
+    int id;
 
-    public Problem(int number) {
-        this.number = number;
+    public Problem(int id) {
+        this.id = id;
     }
 }
