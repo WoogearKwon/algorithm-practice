@@ -5,6 +5,7 @@ import problems.Problem;
 import java.util.*;
 
 /**
+ * 크레인 인형뽑기
  * Refer to link below
  * https://programmers.co.kr/learn/courses/30/lessons/64061
  * */
