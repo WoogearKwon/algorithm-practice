@@ -36,33 +36,46 @@ public class KeypadClick extends Problem {
         int rightPositionY = 3;
 
         for (int number : numbers) {
+            // 왼쪽 1열 중 하나를 누르는 경우
             if (number == 1 || number == 4 || number == 7) {
                 answer.append("L");
                 leftPositionX = 0;
                 leftPositionY = getY(number);
+
+            // 오른쪽 1열 중에 하나를 누르는 경우
             } else if (number == 3 || number == 6 || number == 9) {
                 answer.append("R");
                 rightPositionX = 2;
                 rightPositionY = getY(number);
+
+            // 가운데 열 중에 하나를 누르는 경우
             } else {
                 int y = getY(number);
 
-                int distanceLeft = (1 - leftPositionX) + (getDiffer(y, leftPositionY));
-                int distanceRight = (rightPositionX - 1) + (getDiffer(y, rightPositionY));
+                int distanceLeft = (1 - leftPositionX) + getDistanceY(y, leftPositionY);
+                int distanceRight = (rightPositionX - 1) + getDistanceY(y, rightPositionY);
 
+                // 오른쪽이 가까운 경우
                 if (distanceLeft > distanceRight) {
                     answer.append("R");
                     rightPositionX = 1;
                     rightPositionY = y;
+
+                // 왼쪽이 가까운 경우
                 } else if (distanceLeft < distanceRight) {
                     answer.append("L");
                     leftPositionX = 1;
                     leftPositionY = y;
+
+                // 타겟으로부터 왼손 오른손 거리가 같은 경우
                 } else {
+
+                    // 오른손잡이
                     if (isRightHanded) {
                         answer.append("R");
                         rightPositionX = 1;
                         rightPositionY = y;
+                    // 왼손잡이
                     } else {
                         answer.append("L");
                         leftPositionX = 1;
@@ -75,7 +88,7 @@ public class KeypadClick extends Problem {
         return answer.toString();
     }
 
-    private int getDiffer(int a, int b) {
+    private int getDistanceY(int a, int b) {
         return (a >= b) ? a - b : b - a;
     }
 
