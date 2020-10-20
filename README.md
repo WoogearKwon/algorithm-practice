@@ -1,5 +1,5 @@
 # AlgorithmPractice
-알고리즘 문제 풀이소 저장소
+알고리즘 문제 풀이 저장소
 
 ## 사용한 IDE
 - IntelliJ IDEA 2020.1.1 (EDU)
