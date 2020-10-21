@@ -1,6 +1,7 @@
 package problems.code_challenge;
 
 import problems.Problem;
+import problems.sort.NumberInK;
 
 import java.util.*;
 
@@ -22,7 +23,8 @@ public class PickAndPlus extends Problem {
         int[] numbers = {12,44,3,2,99,7,34,57,43,100,11,53,24,2,1,3,4,1};
 //        int[] numbers = {2,1,3,4,1}; // result = [2,3,4,5,6,7]
 //        int[] numbers = {5,0,2,7}; // result = [2,5,7,9,12]
-        System.out.println(Arrays.toString(solution(numbers)));
+        System.out.println(getClass().getSimpleName() + " 정답:\n" +
+                "" + Arrays.toString(solution(numbers)));
     }
 
     // My solution

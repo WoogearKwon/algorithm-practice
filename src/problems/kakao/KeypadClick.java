@@ -22,7 +22,7 @@ public class KeypadClick extends Problem {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
         String hand = "right"; // result = "LLRLLRLLRL"
 
-        System.out.println(solution(numbers, hand));
+        System.out.println(getClass().getSimpleName() + " 정답:\n" + solution(numbers, hand));
     }
 
     public String solution(int[] numbers, String hand) {

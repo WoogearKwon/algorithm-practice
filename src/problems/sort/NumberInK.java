@@ -21,7 +21,7 @@ public class NumberInK extends Problem {
         int commands[][] = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}}; // 정답 = {5, 6, 3}
 
 
-        System.out.println(NumberInK.class.getSimpleName() + " 정답" +
+        System.out.println(getClass().getSimpleName() + " 정답:\n" +
                 "" + Arrays.toString(solution(array, commands)));
     }
 
@@ -79,6 +79,7 @@ public class NumberInK extends Problem {
     }
 
     // 다른 사람의 풀이
+    // 얼마나 간결한가!!
     public int[] solution2(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
