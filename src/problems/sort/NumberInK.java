@@ -4,13 +4,13 @@ import problems.Problem;
 
 import java.util.Arrays;
 
+/**
+ * K번째수
+ * Refer to link below
+ * https://programmers.co.kr/learn/courses/30/lessons/42748
+ * */
 public class NumberInK extends Problem {
 
-    /**
-     * K번째수
-     * Refer to link below
-     * https://programmers.co.kr/learn/courses/30/lessons/42748
-     * */
     public NumberInK(int id) {
         super(id);
     }
@@ -21,8 +21,7 @@ public class NumberInK extends Problem {
         int commands[][] = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}}; // 정답 = {5, 6, 3}
 
 
-        System.out.println(getClass().getSimpleName() + " 정답:\n" +
-                "" + Arrays.toString(solution(array, commands)));
+        System.out.println(printAnswerFormat + Arrays.toString(solution(array, commands)));
     }
 
     // 나의 풀이
