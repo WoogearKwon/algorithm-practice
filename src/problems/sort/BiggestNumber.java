@@ -33,7 +33,7 @@ public class BiggestNumber extends Problem {
         // ex) 6102와 6210을 비교해서 lexicographically(사전적)으로 더 큰 문자열이 되도록 정렬
         Arrays.sort(arr, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
 
-        // 입력값이 {0,0,0,0,}일 경우 0으로 리턴
+        // 입력값이 {0,0,0,0,}일 경우 0000이 아닌 0으로 리턴
         if(arr[0].equals("0")) return "0";
 
         StringBuilder sb = new StringBuilder();
