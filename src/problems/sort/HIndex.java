@@ -5,7 +5,7 @@ import problems.Problem;
 import java.util.Arrays;
 
 /**
- * 가장 큰수
+ * H-Index
  * Refer to link below
  * https://programmers.co.kr/learn/courses/30/lessons/42747
  * */
