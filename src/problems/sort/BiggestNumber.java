@@ -12,11 +12,6 @@ import java.util.List;
  * https://programmers.co.kr/learn/courses/30/lessons/42746?language=java
  * */
 public class BiggestNumber extends Problem {
-
-    public BiggestNumber(int id) {
-        super(id);
-    }
-
     @Override
     public void run() {
         int[] numbers = {6, 10, 2}; // answer = "6210"

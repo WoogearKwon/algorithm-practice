@@ -8,11 +8,6 @@ import problems.Problem;
  * https://programmers.co.kr/learn/courses/30/lessons/67256
  * */
 public class KeypadClick extends Problem {
-
-    public KeypadClick(int id) {
-        super(id);
-    }
-
     @Override
     public void run() {
 //        int[] numbers = {1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5};

@@ -10,11 +10,6 @@ import java.util.HashMap;
  * https://programmers.co.kr/learn/courses/30/lessons/42576
  * */
 public class Marathon extends Problem {
-
-    public Marathon(int id) {
-        super(id);
-    }
-
     @Override
     public void run() {
         // 동명이인 없음

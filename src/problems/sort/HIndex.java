@@ -10,10 +10,6 @@ import java.util.Arrays;
  * https://programmers.co.kr/learn/courses/30/lessons/42747
  * */
 public class HIndex extends Problem {
-    public HIndex(int id) {
-        super(id);
-    }
-
     @Override
     public void run() {
         int[] citations = {3, 0, 6, 1, 5};

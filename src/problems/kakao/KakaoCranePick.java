@@ -10,13 +10,6 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/64061
  * */
 public class KakaoCranePick extends Problem {
-    private int id;
-
-    public KakaoCranePick(int id) {
-        super(id);
-        this.id = id;
-    }
-
     @Override
     public void run() {
         int[][] board = {{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}};

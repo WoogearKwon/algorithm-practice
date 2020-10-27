@@ -11,13 +11,6 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/68644
  * */
 public class PickAndPlus extends Problem {
-    private int id;
-
-    public PickAndPlus(int id) {
-        super(id);
-        this.id = id;
-    }
-
     @Override
     public void run() {
         int[] numbers = {12,44,3,2,99,7,34,57,43,100,11,53,24,2,1,3,4,1};
