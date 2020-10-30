@@ -1,4 +1,5 @@
 import problems.hash.Marathon;
+import problems.hash.PhoneNumbers;
 import problems.kakao.KakaoCranePick;
 import problems.Problem;
 import problems.code_challenge.PickAndPlus;
@@ -21,6 +22,7 @@ public class Main {
         problems.put(4, new BiggestNumber());
         problems.put(5, new HIndex());
         problems.put(6, new Marathon());
+        problems.put(7, new PhoneNumbers());
 
         problems.get(problems.size() - 1).run();
     }
