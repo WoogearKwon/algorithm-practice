@@ -93,6 +93,7 @@ public class Camouflage extends Problem {
     /**
      * <다른 사람의 풀이 1/>
      * 매우 깔끔하다. 풀이 방법을 정확히 이해했어야 한다.
+     * 내가 고려하지 못한 것은 입지 않는 경우이다.
      * 소요 시간은 평균 0.10ms 미만이다.
      * */
     public int solution2(String[][] clothes) {
@@ -105,9 +106,9 @@ public class Camouflage extends Problem {
 
         Set<String> keySet = map.keySet();
         for (String key : keySet)
-            answer *= map.get(key) + 1; // 1을 더하는 이유는 해당 종류의 옷을 안입는 경우를 고려
+            answer *= map.get(key) + 1; // 해당 종류의 옷을 안입는 경우를 고려 (이것이 핵심이다.)
 
-        return answer - 1; // 1을 빼는 이뉴 : 아무것도 안입은 경우를 제거
+        return answer - 1; // 아무것도 안 입은 경우를 제거
     }
 
     /**
