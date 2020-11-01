@@ -1,3 +1,4 @@
+import problems.hash.Camouflage;
 import problems.hash.Marathon;
 import problems.hash.PhoneNumbers;
 import problems.kakao.KakaoCranePick;
@@ -23,6 +24,7 @@ public class Main {
         problems.put(5, new HIndex());
         problems.put(6, new Marathon());
         problems.put(7, new PhoneNumbers());
+        problems.put(8, new Camouflage());
 
         problems.get(problems.size() - 1).run();
     }
