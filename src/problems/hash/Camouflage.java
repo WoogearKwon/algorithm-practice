@@ -92,6 +92,7 @@ public class Camouflage extends Problem {
 
     /**
      * <다른 사람의 풀이 1/>
+     * 링크: https://sas-study.tistory.com/215
      * 매우 깔끔하다. 풀이 방법을 정확히 이해했어야 한다.
      * 내가 고려하지 못한 것은 입지 않는 경우이다.
      * 소요 시간은 평균 0.10ms 미만이다.
