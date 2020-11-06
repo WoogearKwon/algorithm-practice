@@ -1,18 +1,16 @@
+import problems.Problem;
+import problems.code_challenge.PickAndPlus;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
 import problems.hash.PhoneNumbers;
 import problems.kakao.KakaoCranePick;
-import problems.Problem;
-import problems.code_challenge.PickAndPlus;
 import problems.kakao.KeypadClick;
 import problems.sort.BiggestNumber;
 import problems.sort.HIndex;
 import problems.sort.NumberInK;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
