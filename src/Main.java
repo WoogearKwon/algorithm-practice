@@ -1,3 +1,4 @@
+import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
 import problems.hash.PhoneNumbers;
@@ -25,6 +26,7 @@ public class Main {
         problems.put(6, new Marathon());
         problems.put(7, new PhoneNumbers());
         problems.put(8, new Camouflage());
+        problems.put(9, new BestAlbum());
 
         problems.get(problems.size() - 1).run();
     }
