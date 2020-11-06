@@ -2,10 +2,7 @@ package problems.hash;
 
 import problems.Problem;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.function.BiConsumer;
 
 /**
@@ -14,7 +11,7 @@ import java.util.function.BiConsumer;
  * 베스트 앨범에 들어갈 노래의 고유 번호를 순서대로 return하도록 solution 함수를 완성하라.
  *
  * <문제 원본 링크/>
- * https://programmers.co.kr/learn/courses/30/lessons/42579
+ * https://programmers.co.kr/learn/courses/30/lessons/42579?language=java
  *
  * <노래 수록 기준/>
  * 1. 속한 노래가 많이 재생된 장르를 먼저 수록
@@ -38,25 +35,49 @@ public class BestAlbum extends Problem {
         System.out.println(printAnswerFormat + Arrays.toString(solution(genres, plays)));
     }
 
+    // 첫번째 시도 : 성공률 20% (실수: treeMap이 아닌 playSums로 for문 실행)
+    // 두번째 시도 : 모두 성공, 그러나 소요시간이 어림잡아 평균 7ms. 괜찮은가?
     public int[] solution(String[] genres, int[] plays) {
-        int[] answer = {};
+        HashMap<String, Integer> playSums = new HashMap<>(); // 장르별 총 재생수
+        HashMap<String, Integer> musicNumbers = new HashMap<>(); // 장르별 총 음악수
+        HashMap<Integer, Integer> playIndexes = new HashMap<>(); // index를 key로 하는 재생수
 
-        HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < genres.length; i++) {
-            map.put(genres[i], map.getOrDefault(genres[i], 0) + plays[i]);
+            playSums.put(genres[i], playSums.getOrDefault(genres[i], 0) + plays[i]);
+            musicNumbers.put(genres[i], musicNumbers.getOrDefault(genres[i], 0) + 1);
+            playIndexes.put(i, plays[i]);
         }
 
         TreeMap<Integer, String> treeMap = new TreeMap<>(Collections.reverseOrder());
 
-        map.forEach(new BiConsumer<String, Integer>() {
+        // TreeMap에 저장하면 자동으로 key 기준으로 정렬, reverseOrder 내림차순 정렬
+        playSums.forEach(new BiConsumer<String, Integer>() {
             @Override
             public void accept(String s, Integer integer) {
                 treeMap.put(integer, s);
             }
         });
 
-        System.out.println(treeMap);
+        List<Integer> indexList = new ArrayList<>();
 
-        return answer;
+        for (String genre : treeMap.values()) { // 재생수 많은 장르별로 반복
+
+            int bestNumbers = musicNumbers.get(genre) > 1 ? 2 : 1; // 베스트앨범에 들어갈 장르별 음악수
+            for (int i = 0; i < bestNumbers; i++) {
+
+                int index = 0;
+                int biggestPlays = 0;
+                for (int j = 0; j < genres.length; j++) {
+                    if (playIndexes.containsKey(j) && genres[j].equals(genre) && plays[j] > biggestPlays) {
+                        index = j;
+                        biggestPlays = plays[j];
+                    }
+                }
+                playIndexes.remove(index); //
+                indexList.add(index);
+            }
+        }
+
+        return indexList.stream().mapToInt(i -> i).toArray();
     }
 }
