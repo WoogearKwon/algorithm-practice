@@ -49,9 +49,8 @@ public class BestAlbum extends Problem {
             indexOfPlays.put(i, plays[i]);
         }
 
-        TreeMap<Integer, String> treeMap = new TreeMap<>(Collections.reverseOrder());
-
         // TreeMap에 저장하면 자동으로 key 기준으로 정렬, reverseOrder 내림차순 정렬
+        TreeMap<Integer, String> treeMap = new TreeMap<>(Collections.reverseOrder());
         playsOfGenres.forEach((s, integer) -> treeMap.put(integer, s));
 
         List<Integer> indexOfBests = new ArrayList<>();
@@ -90,19 +89,19 @@ public class BestAlbum extends Problem {
                 .collect(Collectors.groupingBy(Music::getGenre))
                 .entrySet().stream()
                 .sorted((a, b) -> sum(b.getValue()) - sum(a.getValue()))
-                .flatMap(x->x.getValue().stream().sorted().limit(2))
-                .mapToInt(x->x.id).toArray();
+                .flatMap(x -> x.getValue().stream().sorted().limit(2))
+                .mapToInt(x -> x.id).toArray();
     }
 
     private int sum(List<Music> value) {
         int answer = 0;
         for (Music music : value) {
-            answer+=music.played;
+            answer += music.played;
         }
         return answer;
     }
 
-    public class Music implements Comparable<Music>{
+    public static class Music implements Comparable<Music>{
         private final int played;
         private final int id;
         private final String genre;
