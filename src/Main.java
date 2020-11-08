@@ -9,6 +9,7 @@ import problems.kakao.KeypadClick;
 import problems.sort.BiggestNumber;
 import problems.sort.HIndex;
 import problems.sort.NumberInK;
+import problems.stack.StockPrice;
 
 import java.util.HashMap;
 
@@ -25,6 +26,7 @@ public class Main {
         problems.put(7, new PhoneNumbers());
         problems.put(8, new Camouflage());
         problems.put(9, new BestAlbum());
+        problems.put(10, new StockPrice());
 
         problems.get(problems.size() - 1).run();
     }
