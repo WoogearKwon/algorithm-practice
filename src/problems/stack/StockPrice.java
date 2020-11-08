@@ -27,6 +27,13 @@ public class StockPrice extends Problem {
         System.out.println(printAnswerFormat + Arrays.toString(solution(prices)));
     }
 
+    /**
+     * 1. 큐에 모든 배열의 수를 차례로 저장
+     * 2. 큐의 값이 없을 때까지 반복문 while 실행
+     * 2. 큐의 값을 하나씩 빼서 배열의 다음 칸 수를 차례로 비교
+     * 3. 비교한 값보다 큐에서 나온 값이 크면 for문 종료
+     * 4. 그렇지 않다면 answer +1
+     * */
     public int[] solution(int[] prices) {
         int[] answer = new int[prices.length];
 
