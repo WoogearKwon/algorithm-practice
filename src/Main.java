@@ -9,7 +9,7 @@ import problems.kakao.KeypadClick;
 import problems.sort.BiggestNumber;
 import problems.sort.HIndex;
 import problems.sort.NumberInK;
-import problems.stack.StockPrice;
+import problems.stack_queue.StockPrice;
 
 import java.util.HashMap;
 

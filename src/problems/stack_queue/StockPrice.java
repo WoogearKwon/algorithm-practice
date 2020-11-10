@@ -1,4 +1,4 @@
-package problems.stack;
+package problems.stack_queue;
 
 import problems.Problem;
 
@@ -17,7 +17,7 @@ import java.util.Queue;
  *
  * <제한 사항/>
  * prices의 각 가격은 1 이상 10,000이하의 자연수
- * prices의 길이는 2 이상, 100,000 이하하
+ * prices의 길이는 2 이상, 100,000 이하
  * * */
 public class StockPrice extends Problem {
     @Override
