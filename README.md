@@ -30,3 +30,4 @@
 
 ### 스택/큐
 - [20.11.09] 주식 가격 [StockPrice.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/StockPrice.java) - 초마다 기록된 주식가격이 각 초마다 가격이 떨어지지 않은 시간 구하기
+- [20.11.11] 기능 개발 DevelopingFunction.java - 
