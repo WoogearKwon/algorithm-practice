@@ -18,15 +18,15 @@
 - [20.10.20] 키패드 누르기 [KeypadClick.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/kakao/KeypadClick.java) - 프로그래머스(카카오 인턴)
 
 ### 정렬
-- [20.10.21] K번째수 구하기 [NumberInK.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/NumberInK.java): 2차배열을 잘라서 정렬하고 임의의 차례에 있는 수 구하기
-- [20.10.26] 가장 큰 수 [BiggestNumber.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/BiggestNumber.java): 배열의 숫자를 문자열로 변환하여 붙여서 가장 큰 수의 조합 찾기
-- [20.10.27] H-Index [HIndex.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/HIndex.java): 배열을 정렬해서 특정 조건의 숫자 구하기
+- [20.10.21] K번째수 구하기 [NumberInK.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/NumberInK.java) - 2차배열을 잘라서 정렬하고 임의의 차례에 있는 수 구하기
+- [20.10.26] 가장 큰 수 [BiggestNumber.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/BiggestNumber.java) - 배열의 숫자를 문자열로 변환하여 붙여서 가장 큰 수의 조합 찾기
+- [20.10.27] H-Index [HIndex.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/HIndex.java) - 배열을 정렬해서 특정 조건의 숫자 구하기
 
 ### 해시
-- [20.10.28] 완주하지 못한 선수 [Marathon.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/Marathon.java): 조건에 부합하는 사람 이름 찾기
-- [20.10.31] 전화번호 목록 [PhoneNumbers.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/PhoneNumbers.java): 전화번호 중에 접두어가 겹치는 경우가 있는지 확인하기
-- [20.11.01] 위장 [Camouflage.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/Camouflage.java): 2차원 배열에 담긴 옷을 서로 다른 종류대로 조합할 수 있는 경우의 수 구하기
-- [20.11.07] 베스트앨범 [BestAlbum.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/BestAlbum.java): 각 장르별로 가장 많이된 음악의 index를 최대 2개씩 구하기
+- [20.10.28] 완주하지 못한 선수 [Marathon.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/Marathon.java) - 조건에 부합하는 사람 이름 찾기
+- [20.10.31] 전화번호 목록 [PhoneNumbers.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/PhoneNumbers.java) - 전화번호 중에 접두어가 겹치는 경우가 있는지 확인하기
+- [20.11.01] 위장 [Camouflage.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/Camouflage.java) - 2차원 배열에 담긴 옷을 서로 다른 종류대로 조합할 수 있는 경우의 수 구하기
+- [20.11.07] 베스트앨범 [BestAlbum.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/BestAlbum.java) - 각 장르별로 가장 많이된 음악의 index를 최대 2개씩 구하기
 
 ### 스택/큐
-- [20.11.09] 주식 가격 [StockPrice.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack/StockPrice.java): 초마다 기록된 주식가격이 각 초마다 가격이 떨어지지 않은 시간 구하기
+- [20.11.09] 주식 가격 [StockPrice.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/StockPrice.java) - 초마다 기록된 주식가격이 각 초마다 가격이 떨어지지 않은 시간 구하기
