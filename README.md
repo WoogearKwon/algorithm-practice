@@ -31,3 +31,4 @@
 ### 스택/큐
 - [20.11.09] 주식 가격 [StockPrice.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/StockPrice.java) - 초마다 기록된 주식가격이 각 초마다 가격이 떨어지지 않은 시간 구하기
 - [20.11.11] 기능 개발 [DevelopingFunction.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/DevelopingFunction.java) - 개발중인 기능의 작업진도와 속도를 고려해 일정별 배포 가능한 기능의 개수가 담긴 배열을 만들기
+- [20.11.13] 다리를 건너는 트럭 [PassingTrucks.java](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/PassingTrucks.java) - 매 1초마다 1만큼 움직이는 트럭들이 다리가 견디는 무게를 넘지 않고 1차선 다리 위를 순서대로 모두 건너는 시간 구하기
