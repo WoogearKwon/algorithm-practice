@@ -11,6 +11,7 @@ import problems.sort.HIndex;
 import problems.sort.NumberInK;
 import problems.stack_queue.DevelopingFunction;
 import problems.stack_queue.PassingTrucks;
+import problems.stack_queue.Printer;
 import problems.stack_queue.StockPrice;
 
 import java.util.HashMap;
@@ -31,6 +32,7 @@ public class Main {
         problems.put(10, new StockPrice());
         problems.put(11, new DevelopingFunction());
         problems.put(12, new PassingTrucks());
+        problems.put(13, new Printer());
 
         problems.get(problems.size() - 1).run();
     }

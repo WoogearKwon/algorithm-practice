@@ -39,6 +39,17 @@ public class PassingTrucks extends Problem {
         System.out.println(printAnswerFormat + solution(truckTestCase.bridge_length, truckTestCase.bridge_weight, truckTestCase.truck_weights));
     }
 
+    /**
+     * <내 풀이/>
+     * while 문이 한번 반복될 때 1초가 흐르고,
+     * 다리 위의 트럭은 1만큼 앞으로 전진
+     * 그래서 매 1초마다 아래의 항목들을 수행한다.
+     * 1. answer + 1
+     * 2. 다리위 트럭이 하나도 없으면 종료한다.
+     * 3. 다리위 트럭들의 무게의 합을 구한다.
+     * 4. 다리위 트럭의 위치 +1
+     * 5. 다리의 무게에 여유가 있으면 새로운 트럭이 건너기 시작한다.
+     * */
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
 
@@ -47,17 +58,6 @@ public class PassingTrucks extends Problem {
 
         for (int w : truck_weights) waitingTrucks.offer(w);
 
-        /**
-         * <내 풀이/>
-         * while 문이 한번 반복될 때 1초가 흐르고,
-         * 다리 위의 트럭은 1만큼 앞으로 전진
-         * 그래서 매 1초마다 아래의 항목들을 수행한다.
-         * 1. answer + 1
-         * 2. 다리위 트럭이 하나도 없으면 종료한다.
-         * 3. 다리위 트럭들의 무게의 합을 구한다.
-         * 4. 다리위 트럭의 위치 +1
-         * 5. 다리의 무게에 여유가 있으면 새로운 트럭이 건너기 시작한다.
-         * */
         while (true) {
             if (passingTrucks.isEmpty()) {
                 // 모든 트럭이 건넜으면 반복문 종료
