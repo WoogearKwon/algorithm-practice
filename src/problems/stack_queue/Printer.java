@@ -5,6 +5,9 @@ import problems.Problem;
 import java.util.*;
 
 /**
+ * <문제 원본 링크/>
+ * https://programmers.co.kr/learn/courses/30/lessons/42587
+ *
  * <프린터/>
  * 중요도가 높은 문서를 먼저 인쇄하는 프린터를 개발했다.
  * 이 프린터는 아래와 같은 방식으로 인쇄 작업을 수행한다.
