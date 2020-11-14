@@ -20,7 +20,7 @@
 ### 정렬
 - [20.10.21] [K번째수 구하기](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/NumberInK.java) - 2차배열을 잘라서 정렬하고 임의의 차례에 있는 수 구하기
 - [20.10.26] [가장 큰 수](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/BiggestNumber.java) - 배열의 숫자를 문자열로 변환하여 붙여서 가장 큰 수의 조합 찾기
-- [20.10.27] [H-Index(https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/HIndex.java) - 배열을 정렬해서 특정 조건의 숫자 구하기
+- [20.10.27] [H-Index](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/sort/HIndex.java) - 배열을 정렬해서 특정 조건의 숫자 구하기
 
 ### 해시
 - [20.10.28] [완주하지 못한 선수](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/hash/Marathon.java) - 조건에 부합하는 사람 이름 찾기
