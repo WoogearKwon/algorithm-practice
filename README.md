@@ -33,3 +33,6 @@
 - [20.11.11] [기능 개발](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/DevelopingFunction.java) - 개발중인 기능의 작업진도와 속도를 고려해 일정별 배포 가능한 기능의 개수가 담긴 배열을 만들기
 - [20.11.13] [다리를 건너는 트럭](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/PassingTrucks.java) - 매 1초마다 1만큼 움직이는 트럭들이 다리가 견디는 무게를 넘지 않고 1차선 다리 위를 순서대로 모두 건너는 시간 구하기
 - [20.11.14] [프린터](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/stack_queue/Printer.java) - 우선순위가 높은 문서를 먼저 출력하는 프린터에서 내 문서가 출력되는 순서 구하기
+
+### 힙(Heap)
+- [20.11.18] [더 맵게](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/heap/MoreSpicy.java) - 모든 음식이 스코빌 지수 K이상이 되도록 가장 덜 매운 음식 두 개를 조합하기
