@@ -21,6 +21,11 @@ public class DiskController extends Problem {
         System.out.println(printAnswerFormat + solution(jobs));
     }
 
+    /**
+     * 첫 풀이 시도는 실패
+     * 대략 방법은 알겠으나 코드로 옮기질 못했다.
+     * 문제의 정확한 이해와 집중력이 부족했다.
+     * */
     public int solution(int[][] jobs) {
         int answer = 0;
         int duration = 0; // 현재 처리중인 시간
