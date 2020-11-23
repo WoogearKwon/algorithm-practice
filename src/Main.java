@@ -5,6 +5,7 @@ import problems.hash.Camouflage;
 import problems.hash.Marathon;
 import problems.hash.PhoneNumbers;
 import problems.heap.DiskController;
+import problems.heap.DoublePriorityQueue;
 import problems.heap.MoreSpicy;
 import problems.kakao.KakaoCranePick;
 import problems.kakao.KeypadClick;
@@ -37,6 +38,7 @@ public class Main {
         problems.put(13, new Printer());
         problems.put(14, new MoreSpicy());
         problems.put(15, new DiskController());
+        problems.put(16, new DoublePriorityQueue());
 
         problems.get(problems.size() - 1).run();
     }
