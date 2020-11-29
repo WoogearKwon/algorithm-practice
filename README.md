@@ -38,3 +38,6 @@
 - [20.11.18] [더 맵게](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/heap/MoreSpicy.java) - 모든 음식이 스코빌 지수 K이상이 되도록 가장 덜 매운 음식 두 개를 조합하기
 - [20.11.23] [디스크 컨트롤러](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/heap/DiskController.java) - 2차원 배열로 주어진 작업시작 시간과 처리시간을 사용하여 총 처리 시간이 가장 적게 걸리는 방법으로 작업했을 때 평균값 구하
 - [20.11.24] [이중우선순위큐](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/heap/DoublePriorityQueue.java) - 임의의 자료구조 이중우선순위큐를 구현하여 최댓값/최솟값을 삽입 또는 삭제하는 연산을 수행하고 결과값을 리턴하기
+
+### 완전탐색(Brute Force)
+- [20.11.29] [모의고사](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/brute_force/PracticeExam.java) - 모의고사에서 수학문제를 찍은 삼인방 중에 가장 문제를 많이 맞춘 사람 찾기
