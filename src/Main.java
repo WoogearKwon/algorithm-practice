@@ -1,4 +1,5 @@
 import problems.Problem;
+import problems.brute_force.FindingPrime;
 import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.hash.BestAlbum;
@@ -41,6 +42,7 @@ public class Main {
         problems.put(15, new DiskController());
         problems.put(16, new DoublePriorityQueue());
         problems.put(17, new PracticeExam());
+        problems.put(18, new FindingPrime());
 
         problems.get(problems.size() - 1).run();
     }
