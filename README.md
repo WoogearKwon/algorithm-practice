@@ -42,3 +42,4 @@
 ### 완전탐색(Brute Force)
 - [20.11.29] [모의고사](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/brute_force/PracticeExam.java) - 모의고사에서 수학문제를 찍은 삼인방 중에 가장 문제를 많이 맞춘 사람 찾기
 - [20.12.01] [소수찾기](https://github.com/WoogearKwon/AlgorithmPractice/blob/master/src/problems/brute_force/FindingPrime.java) - 주어진 문자열안의 숫자를 조합하여 소수 찾기
+- [20.12.05] [카펫]() - 주어진 카펫 격자의 숫자를 통해 카펫의 가로/세로 사이즈 구하기

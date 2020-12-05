@@ -1,4 +1,5 @@
 import problems.Problem;
+import problems.brute_force.Carpet;
 import problems.brute_force.FindingPrime;
 import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
@@ -43,6 +44,7 @@ public class Main {
         problems.put(16, new DoublePriorityQueue());
         problems.put(17, new PracticeExam());
         problems.put(18, new FindingPrime());
+        problems.put(19, new Carpet());
 
         problems.get(problems.size() - 1).run();
     }
