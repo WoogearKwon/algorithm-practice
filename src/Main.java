@@ -3,6 +3,7 @@ import problems.brute_force.Carpet;
 import problems.brute_force.FindingPrime;
 import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
+import problems.dfs_bfs.TargetNumber;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
@@ -45,6 +46,7 @@ public class Main {
         problems.put(17, new PracticeExam());
         problems.put(18, new FindingPrime());
         problems.put(19, new Carpet());
+        problems.put(20, new TargetNumber());
 
         problems.get(problems.size() - 1).run();
     }
