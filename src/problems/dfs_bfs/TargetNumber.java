@@ -2,6 +2,9 @@ package problems.dfs_bfs;
 
 import problems.Problem;
 
+import java.util.Arrays;
+import java.util.Stack;
+
 /**
  * <타켓넘버/>
  * 원문 링크: https://programmers.co.kr/learn/courses/30/lessons/43165
@@ -13,7 +16,7 @@ public class TargetNumber extends Problem {
     public void run() {
         int[] numbers = {1,1,1,1,1};
         int target = 3;
-        System.out.println(printAnswerFormat + solution(numbers, target));
+        System.out.println(printAnswerFormat + solution2(numbers, target));
     }
 
     public int solution(int[] numbers, int target) {
@@ -24,6 +27,41 @@ public class TargetNumber extends Problem {
 
 //        answer = dfs3(numbers, 0, 0, target);
 //        return answer;
+    }
+
+    /**
+     * <내 풀이/>
+     * stack을 사용해서 풀어보기
+     * */
+    private int solution2(int[] numbers, int target) {
+        int answer = 0;
+
+        Stack<Integer> nodes = new Stack<>();
+        Stack<int[]> stack = new Stack<>();
+
+        nodes.push(0);
+        stack.push(numbers);
+
+        while (!nodes.isEmpty()) {
+            int node = nodes.pop();
+            int[] array = stack.pop();
+
+            if (node == numbers.length) {
+                int sum = 0;
+                for (int n : array) sum += n;
+                if (sum == target) answer++;
+
+            } else {
+                nodes.push(node + 1);
+                stack.push(Arrays.copyOf(array, array.length));
+
+                nodes.push(node + 1);
+                array[node] *= -1;
+                stack.push(array);
+            }
+        }
+
+        return answer;
     }
 
     /**
