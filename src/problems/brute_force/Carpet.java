@@ -15,7 +15,7 @@ public class Carpet extends Problem {
 //        int brown = 8; int yellow = 1; // return [3,3];
         int brown = 24; int yellow = 24; // return [8,6];
 
-        System.out.println(printAnswerFormat + Arrays.toString(solution(brown, yellow)));
+        printAnswer(solution(brown, yellow));
     }
 
     public int[] solution(int brown, int yellow) {

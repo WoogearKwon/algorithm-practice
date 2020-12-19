@@ -32,7 +32,7 @@ public class DoublePriorityQueue extends Problem {
 //        String[] operations = {"I 7","I 5","I -5","D -1"}; // return = [7,5]
         String[] operations = {"I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333"}; // return = [653,97]
 
-        System.out.println(printAnswerFormat + Arrays.toString(solution(operations)));
+        printAnswer(solution(operations));
     }
 
     /**

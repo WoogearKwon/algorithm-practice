@@ -16,7 +16,7 @@ public class TargetNumber extends Problem {
     public void run() {
         int[] numbers = {1,1,1,1,1};
         int target = 3;
-        System.out.println(printAnswerFormat + solution2(numbers, target));
+        printAnswer(solution2(numbers, target));
     }
 
     public int solution(int[] numbers, int target) {

@@ -17,7 +17,7 @@ public class Network extends Problem {
 //        int n = 4; int[][] computers = {{1,1,0,0}, {1,1,0,0}, {0,0,1,1}, {0,0,1,1}}; // return = 2
 //        int n = 4; int[][] computers = {{1,1,1,1}, {1,1,0,0}, {1,0,1,0}, {1,0,0,1}}; // return = 1
         int n = 5; int[][] computers = {{1,0,0,1,0}, {0,1,0,1,1}, {0,0,1,1,0}, {1,1,1,1,0}, {0,1,0,0,1}}; // return = 1
-        System.out.println(printAnswerFormat + solution(n, computers));
+        printAnswer(solution(n, computers));
     }
 
     /**
