@@ -24,7 +24,7 @@ public class FindingPrime extends Problem {
 //        String numbers = "011"; // return = 2
         String numbers = "123"; // return = 2
 
-        System.out.println(printAnswerFormat + solution2(numbers));
+        printAnswer(solution2(numbers));
     }
 
     /**

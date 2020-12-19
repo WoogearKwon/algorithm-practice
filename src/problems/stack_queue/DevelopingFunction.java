@@ -22,7 +22,7 @@ public class DevelopingFunction extends Problem {
 //         int[] progresses = {95, 90, 99, 99, 80, 99};
 //         int[] speeds = {1, 1, 1, 1, 1, 1}; // return = {1,3,3,1}
 
-        System.out.println(printAnswerFormat + Arrays.toString(solution(progresses, speeds)));
+        printAnswer(solution(progresses, speeds));
     }
 
     /**

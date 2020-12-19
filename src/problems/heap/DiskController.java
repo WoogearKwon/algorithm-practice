@@ -26,7 +26,7 @@ public class DiskController extends Problem {
     @Override
     public void run() {
         int[][] jobs = {{0,3}, {1,9}, {2,6}}; // return = 9
-        System.out.println(printAnswerFormat + solution(jobs));
+        printAnswer(solution(jobs));
     }
 
     /**

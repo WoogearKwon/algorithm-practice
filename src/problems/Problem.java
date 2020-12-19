@@ -3,7 +3,7 @@ package problems;
 import java.util.Arrays;
 
 public abstract class Problem implements Testable {
-    private String printAnswerFormat = getClass().getSimpleName() + " 정답:\n";
+    private final String printAnswerFormat = getClass().getSimpleName() + " 정답:\n";
 
     protected void printAnswer (int result) {
         System.out.println(printAnswerFormat + result);
