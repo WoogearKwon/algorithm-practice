@@ -2,8 +2,7 @@ package problems.dfs_bfs;
 
 import problems.Problem;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class TravelRoute extends Problem {
     @Override
@@ -17,8 +16,9 @@ public class TravelRoute extends Problem {
         printAnswer(solution(tickets));
     }
 
-    String[] answer;
     boolean[] check;
+    List<String> list = new ArrayList<>();
+    String route = "";
 
     /**
      * <내 풀이/>
@@ -28,19 +28,39 @@ public class TravelRoute extends Problem {
      * 4.
      * */
     public String[] solution(String[][] tickets) {
-        answer = new String[tickets.length + 1];
-        check = new boolean[tickets.length];
+        for (int i = 0; i < tickets.length; i++) {
+            check = new boolean[tickets.length];
+            String start = tickets[i][0], end = tickets[i][1];
 
-        Arrays.sort(tickets, Comparator.comparing(o -> o[1])); // 목적지의 알파벳순으로 정렬
-        answer[0] = "ICN";
-        int prev = getNextTicket("ICN", tickets);;
-
-        for (int i = 1; i < answer.length; i++) {
-            answer[i] = tickets[prev][1];
-            prev = getNextTicket(tickets[prev][1], tickets);
+            if (start.equals("ICN")) {
+                route = start + ",";
+                check[i] = true;
+                dfs(end, tickets, 1);
+            }
         }
 
-        return answer;
+        Collections.sort(list);
+
+        return list.get(0).split(",");
+    }
+
+    private void dfs(String end, String[][] tickets, int count) {
+        route += end + ",";
+
+        if (count == tickets.length) {
+            list.add(route);
+            return;
+        }
+
+        for (int i = 0; i < tickets.length; i++) {
+            String s = tickets[i][0], e = tickets[i][1];
+            if (s.equals(end) && !check[i]) {
+                check[i] = true;
+                dfs(e, tickets, count + 1);
+                check[i] = false;
+                route = route.substring(0, route.length() - 4);
+            }
+        }
     }
 
     private int getNextTicket(String departure, String[][] tickets) {
