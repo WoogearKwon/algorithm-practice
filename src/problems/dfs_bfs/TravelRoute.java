@@ -10,8 +10,10 @@ public class TravelRoute extends Problem {
 
 //        String[][] tickets = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
         // return = ["ICN", "JFK", "HND", "IAD"]
-         String[][] tickets = {{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL", "SFO"}};
+//         String[][] tickets = {{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL", "SFO"}};
          // return = [ICN, ATL, ICN, SFO, ATL, SFO];
+        String[][] tickets = {{"ICN", "COO"}, {"COO", "ICN"}, {"COO", "ICN"}, {"ICN", "COO"}, {"ICN", "AAA"}};
+        //return = [ICN, AAA, COO, COOO, ICN, ICN];
 
         printAnswer(solution(tickets));
     }
@@ -20,13 +22,6 @@ public class TravelRoute extends Problem {
     List<String> list = new ArrayList<>();
     String route = "";
 
-    /**
-     * <내 풀이/>
-     * 1. tickets를 목적지의 알파벳 순으로 정렬 => 중복 검사를 할 필요가 없음
-     * 2. ICN 출발점 찾기
-     * 3. 경로를 지난 티켓은 check에 true 처리 => 지나간 루트는 검사하지 않음
-     * 4.
-     * */
     public String[] solution(String[][] tickets) {
         for (int i = 0; i < tickets.length; i++) {
             check = new boolean[tickets.length];
@@ -61,17 +56,5 @@ public class TravelRoute extends Problem {
                 route = route.substring(0, route.length() - 4);
             }
         }
-    }
-
-    private int getNextTicket(String departure, String[][] tickets) {
-        int position = -1;
-        for (int i = 0; i < tickets.length; i++) {
-            if (departure.equals(tickets[i][0]) && !check[i]) {
-                position = i;
-                check[i] = true;
-                break;
-            }
-        }
-        return position;
     }
 }
