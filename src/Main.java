@@ -1,28 +1,12 @@
 import problems.Problem;
-import problems.brute_force.Carpet;
-import problems.brute_force.FindingPrime;
-import problems.brute_force.PracticeExam;
-import problems.code_challenge.PickAndPlus;
-import problems.dfs_bfs.ConvertingWord;
-import problems.dfs_bfs.Network;
-import problems.dfs_bfs.TargetNumber;
-import problems.dfs_bfs.TravelRoute;
-import problems.hash.BestAlbum;
-import problems.hash.Camouflage;
-import problems.hash.Marathon;
-import problems.hash.PhoneNumbers;
-import problems.heap.DiskController;
-import problems.heap.DoublePriorityQueue;
-import problems.heap.MoreSpicy;
-import problems.kakao.KakaoCranePick;
-import problems.kakao.KeypadClick;
-import problems.sort.BiggestNumber;
-import problems.sort.HIndex;
-import problems.sort.NumberInK;
-import problems.stack_queue.DevelopingFunction;
-import problems.stack_queue.PassingTrucks;
-import problems.stack_queue.Printer;
-import problems.stack_queue.StockPrice;
+import problems.brute_force.*;
+import problems.code_challenge.*;
+import problems.dfs_bfs.*;
+import problems.hash.*;
+import problems.heap.*;
+import problems.kakao.*;
+import problems.sort.*;
+import problems.stack_queue.*;
 
 import java.util.HashMap;
 
