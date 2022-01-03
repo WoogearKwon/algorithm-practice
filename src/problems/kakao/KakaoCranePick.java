@@ -73,11 +73,15 @@ public class KakaoCranePick extends Problem {
                         board[j][move - 1] = 0;
                         break;
                     }
+
                     if (board[j][move - 1] == stack.peek()) {
                         stack.pop();
                         answer += 2;
-                    } else
+                        
+                    } else {
                         stack.push(board[j][move - 1]);
+                    }
+
                     board[j][move - 1] = 0;
                     break;
                 }
