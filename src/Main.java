@@ -17,6 +17,7 @@ import problems.heap.MoreSpicy;
 import problems.kakao.KakaoCranePick;
 import problems.kakao.KakaoCranePickKt;
 import problems.kakao.KeypadClick;
+import problems.kakao.KeypadClickKt;
 import problems.sort.BiggestNumber;
 import problems.sort.HIndex;
 import problems.sort.NumberInK;
@@ -55,6 +56,7 @@ public class Main {
         problems.put(22, new ConvertingWord());
         problems.put(23, new TravelRoute());
         problems.put(24, new KakaoCranePickKt());
+        problems.put(25, new KeypadClickKt());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();

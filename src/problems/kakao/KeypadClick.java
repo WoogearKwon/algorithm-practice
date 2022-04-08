@@ -5,7 +5,7 @@ import problems.Problem;
 /**
  * 키패드 누르기
  * Refer to link below
- * https://programmers.co.kr/learn/courses/30/lessons/67256
+ * [https://programmers.co.kr/learn/courses/30/lessons/67256]
  * */
 public class KeypadClick extends Problem {
     @Override
