@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * 두 개 뽑아서 더하기
  * Refer to link below
- * https://programmers.co.kr/learn/courses/30/lessons/68644
+ * [https://programmers.co.kr/learn/courses/30/lessons/68644]
  * */
 public class PickAndPlus extends Problem {
     @Override
@@ -45,8 +45,8 @@ public class PickAndPlus extends Problem {
     public int[] solution2(int[] numbers) {
         Set<Integer> set = new HashSet<>();
 
-        for(int i=0; i<numbers.length; i++) {
-            for(int j=i+1; j<numbers.length; j++) {
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i + 1; j < numbers.length; j++) {
                 set.add(numbers[i] + numbers[j]);
             }
         }
