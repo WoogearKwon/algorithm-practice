@@ -4,10 +4,7 @@ import problems.brute_force.FindingPrime;
 import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.code_challenge.PickAndPlusKt;
-import problems.dfs_bfs.ConvertingWord;
-import problems.dfs_bfs.Network;
-import problems.dfs_bfs.TargetNumber;
-import problems.dfs_bfs.TravelRoute;
+import problems.dfs_bfs.*;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
@@ -59,6 +56,7 @@ public class Main {
         problems.put(24, new KakaoCranePickKt());
         problems.put(25, new KeypadClickKt());
         problems.put(26, new PickAndPlusKt());
+        problems.put(27, new ConvertingWordsKt());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();

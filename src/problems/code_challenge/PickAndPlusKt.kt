@@ -17,7 +17,6 @@ class PickAndPlusKt : Problem() {
 
         for (i in numbers.indices) {
             for (j in i + 1 until numbers.size) {
-                println("numbers[i] = ${numbers[i]}...numbers[j] = ${numbers[j]} ... sum = ${numbers[i] + numbers[j]}")
                 set.add(numbers[i] + numbers[j])
             }
         }
