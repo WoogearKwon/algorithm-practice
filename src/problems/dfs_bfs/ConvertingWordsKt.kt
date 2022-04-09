@@ -56,9 +56,9 @@ class ConvertingWordsKt : Problem() {
                 count++
             }
 
-            if (count >= 2) break
+            if (count >= 2) return false
         }
 
-        return count == 1
+        return true
     }
 }
