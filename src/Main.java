@@ -12,10 +12,7 @@ import problems.hash.PhoneNumbers;
 import problems.heap.DiskController;
 import problems.heap.DoublePriorityQueue;
 import problems.heap.MoreSpicy;
-import problems.kakao.KakaoCranePick;
-import problems.kakao.KakaoCranePickKt;
-import problems.kakao.KeypadClick;
-import problems.kakao.KeypadClickKt;
+import problems.kakao.*;
 import problems.sort.BiggestNumber;
 import problems.sort.HIndex;
 import problems.sort.NumberInK;
@@ -57,6 +54,8 @@ public class Main {
         problems.put(25, new KeypadClickKt());
         problems.put(26, new PickAndPlusKt());
         problems.put(27, new ConvertingWordsKt());
+        problems.put(28, new HouseOne());
+        problems.put(29, new HouseTwo());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
