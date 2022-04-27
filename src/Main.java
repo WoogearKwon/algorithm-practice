@@ -56,6 +56,7 @@ public class Main {
         problems.put(27, new ConvertingWordsKt());
         problems.put(28, new HouseOne());
         problems.put(29, new HouseTwo());
+        problems.put(30, new NetworkKt());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
