@@ -5,6 +5,7 @@ import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.code_challenge.PickAndPlusKt;
 import problems.dfs_bfs.*;
+import problems.etc.Fibonacci;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
@@ -58,6 +59,7 @@ public class Main {
         problems.put(29, new HouseTwo());
         problems.put(30, new NetworkKt());
         problems.put(31, new TargetNumberKt());
+        problems.put(32, new Fibonacci());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
