@@ -60,6 +60,7 @@ public class Main {
         problems.put(30, new NetworkKt());
         problems.put(31, new TargetNumberKt());
         problems.put(32, new Fibonacci());
+        problems.put(33, new TravelRouteKt());
 
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();

@@ -13,7 +13,7 @@ class TargetNumberKt : Problem() {
         printAnswer(result)
     }
 
-    fun solution(numbers: IntArray, target: Int): Int {
+    private fun solution(numbers: IntArray, target: Int): Int {
         return dfs(0, numbers, 0, target)
     }
 
