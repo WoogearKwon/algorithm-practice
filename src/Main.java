@@ -5,6 +5,7 @@ import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.code_challenge.PickAndPlusKt;
 import problems.dfs_bfs.*;
+import problems.doit_algorithm_test.NewAverage;
 import problems.etc.Fibonacci;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
@@ -61,7 +62,7 @@ public class Main {
         problems.put(31, new TargetNumberKt());
         problems.put(32, new Fibonacci());
         problems.put(33, new TravelRouteKt());
-
+        problems.put(34, new NewAverage());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
