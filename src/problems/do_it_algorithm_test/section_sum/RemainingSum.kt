@@ -1,4 +1,4 @@
-package problems.do_it_algorithm_test
+package problems.do_it_algorithm_test.section_sum
 
 import problems.Problem
 
