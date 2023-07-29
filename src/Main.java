@@ -7,6 +7,7 @@ import problems.code_challenge.PickAndPlusKt;
 import problems.dfs_bfs.*;
 import problems.do_it_algorithm_test.section_sum.NewAverage;
 import problems.do_it_algorithm_test.section_sum.RemainingSum;
+import problems.do_it_algorithm_test.two_pointer.SequenceNumberSum;
 import problems.etc.Fibonacci;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
@@ -65,6 +66,7 @@ public class Main {
         problems.put(33, new TravelRouteKt());
         problems.put(34, new NewAverage());
         problems.put(35, new RemainingSum());
+        problems.put(36, new SequenceNumberSum());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
