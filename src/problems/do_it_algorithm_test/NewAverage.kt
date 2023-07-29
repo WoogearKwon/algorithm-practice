@@ -1,4 +1,4 @@
-package problems.doit_algorithm_test
+package problems.do_it_algorithm_test
 
 import problems.Problem
 
