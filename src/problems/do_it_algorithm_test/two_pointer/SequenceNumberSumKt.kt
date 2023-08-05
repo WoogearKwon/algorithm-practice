@@ -22,7 +22,7 @@ import problems.Problem
  *  else endIndx++, sum 변경
  * }
  * */
-class SequenceNumberSum : Problem() {
+class SequenceNumberSumKt : Problem() {
     private val N = 15
 
     private var count = 1 // 숫자 15를 뽑는 경우의 수를 미리 넣고 초기화

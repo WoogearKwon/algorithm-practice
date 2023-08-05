@@ -5,9 +5,9 @@ import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.code_challenge.PickAndPlusKt;
 import problems.dfs_bfs.*;
-import problems.do_it_algorithm_test.section_sum.NewAverage;
-import problems.do_it_algorithm_test.section_sum.RemainingSum;
-import problems.do_it_algorithm_test.two_pointer.SequenceNumberSum;
+import problems.do_it_algorithm_test.section_sum.NewAverageKt;
+import problems.do_it_algorithm_test.section_sum.RemainingSumKt;
+import problems.do_it_algorithm_test.two_pointer.SequenceNumberSumKt;
 import problems.etc.Fibonacci;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
@@ -58,15 +58,15 @@ public class Main {
         problems.put(25, new KeypadClickKt());
         problems.put(26, new PickAndPlusKt());
         problems.put(27, new ConvertingWordsKt());
-        problems.put(28, new HouseOne());
-        problems.put(29, new HouseTwo());
+        problems.put(28, new HouseOneKt());
+        problems.put(29, new HouseTwoKt());
         problems.put(30, new NetworkKt());
         problems.put(31, new TargetNumberKt());
         problems.put(32, new Fibonacci());
         problems.put(33, new TravelRouteKt());
-        problems.put(34, new NewAverage());
-        problems.put(35, new RemainingSum());
-        problems.put(36, new SequenceNumberSum());
+        problems.put(34, new NewAverageKt());
+        problems.put(35, new RemainingSumKt());
+        problems.put(36, new SequenceNumberSumKt());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }

@@ -2,7 +2,7 @@ package problems.kakao
 
 import problems.Problem
 
-class HouseTwo : Problem() {
+class HouseTwoKt : Problem() {
 
     override fun run() {
         val template = "{a} {b} {c} {d} {i}"

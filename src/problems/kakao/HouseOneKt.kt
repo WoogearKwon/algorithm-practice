@@ -2,7 +2,7 @@ package problems.kakao
 
 import problems.Problem
 
-class HouseOne : Problem() {
+class HouseOneKt : Problem() {
 
     override fun run() {
         val path = "EEESEEEEEENNNN"

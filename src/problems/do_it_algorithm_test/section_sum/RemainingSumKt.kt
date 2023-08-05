@@ -8,7 +8,7 @@ import problems.Problem
  * 나누어떨어지는 구간의 개수를 구하는 프로그램을 작성하시오.
  * 즉 구간의 합이 D으로 나누어 떨어지는 (i,j) 쌍의 개수를 구하시오.
  * */
-class RemainingSum : Problem() {
+class RemainingSumKt : Problem() {
     private val N = 5
     private val D = 3
     private val numbers = arrayOf(1, 2, 3, 1, 2)

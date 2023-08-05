@@ -12,7 +12,7 @@ import problems.Problem
 * @n: 주어진 시험 점수의 개수
 * @input: 주어진 시험점수들
 * */
-class NewAverage : Problem() {
+class NewAverageKt : Problem() {
     private val n = 3
     private val input = "40 80 60"
     private val answer = 75.0f
