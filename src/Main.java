@@ -5,6 +5,7 @@ import problems.brute_force.PracticeExam;
 import problems.code_challenge.PickAndPlus;
 import problems.code_challenge.PickAndPlusKt;
 import problems.dfs_bfs.*;
+import problems.do_it_algorithm_test.search.ConnectedComponents;
 import problems.do_it_algorithm_test.section_sum.NewAverageKt;
 import problems.do_it_algorithm_test.section_sum.RemainingSumKt;
 import problems.do_it_algorithm_test.two_pointer.SequenceNumberSumKt;
@@ -69,6 +70,7 @@ public class Main {
         problems.put(35, new RemainingSumKt());
         problems.put(36, new SequenceNumberSumKt());
         problems.put(37, new FurthestNode());
+        problems.put(38, new ConnectedComponents());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
