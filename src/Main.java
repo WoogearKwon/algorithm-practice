@@ -9,6 +9,7 @@ import problems.do_it_algorithm_test.section_sum.NewAverageKt;
 import problems.do_it_algorithm_test.section_sum.RemainingSumKt;
 import problems.do_it_algorithm_test.two_pointer.SequenceNumberSumKt;
 import problems.etc.Fibonacci;
+import problems.graph.FurthestNode;
 import problems.hash.BestAlbum;
 import problems.hash.Camouflage;
 import problems.hash.Marathon;
@@ -67,6 +68,7 @@ public class Main {
         problems.put(34, new NewAverageKt());
         problems.put(35, new RemainingSumKt());
         problems.put(36, new SequenceNumberSumKt());
+        problems.put(37, new FurthestNode());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
