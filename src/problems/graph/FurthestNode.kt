@@ -6,6 +6,9 @@ import kotlin.math.max
 
 /**
  * <가장 먼 노드/>
+ * 최단경로로 이동했을 때 1번에서 가장 멀리 떨어진 노드의 갯수를 구하기
+ * n = 노드의 개수
+ * edge = 간선에 대한 정보가 담긴 2차원 배열
  *
  * <링크/>
  * https://school.programmers.co.kr/learn/courses/30/lessons/49189
@@ -32,10 +35,7 @@ class FurthestNode : Problem() {
         initGraph(n, edge)
         bfs()
 
-        var count = 0
-        dist.forEach {
-            if (it == max) count++
-        }
+        val count = dist.count { it == max }
 
         printAnswer(count.toString())
         println("Your answer is ${ANSWER == count}")
@@ -51,9 +51,9 @@ class FurthestNode : Problem() {
             graph[it] = mutableListOf()
         }
 
-        (0..edge.lastIndex).forEach {
-            val x = edge[it][0]
-            val y = edge[it][1]
+        edge.forEach {
+            val x = it[0]
+            val y = it[1]
 
             graph[x]?.add(y)
             graph[y]?.add(x)
@@ -61,27 +61,27 @@ class FurthestNode : Problem() {
     }
 
     private fun bfs() {
-        val q: Queue<Int> = LinkedList()
-        q.offer(1)
+        val queue = LinkedList<Int>()
+        queue.offer(1)
         visit[1] = true
         dist[1] = 0
 
-        while (q.isNotEmpty()) {
-            val k = q.poll()
+        while (queue.isNotEmpty()) {
+            val node = queue.poll()
 
-            graph[k]?.forEach { x ->
-                if (visit[x].not()) {
-                    q.offer(x)
-                    visit[x] = true
+            graph[node]?.forEach { nextNode ->
+                if (visit[nextNode].not()) {
+                    queue.offer(nextNode)
+                    visit[nextNode] = true
 
-                    dist[x] = dist[k] + 1
-                    max = max(max, dist[x])
+                    dist[nextNode] = dist[node] + 1
+                    max = max(max, dist[nextNode])
                 }
             }
         }
     }
 
     companion object {
-        private val ANSWER = 3
+        private const val ANSWER = 3
     }
 }
