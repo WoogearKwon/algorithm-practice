@@ -3,69 +3,72 @@ package problems.dfs_bfs
 import problems.Problem
 
 class TravelRouteKt : Problem() {
-    lateinit var answer: List<String>
-    private var visit: BooleanArray = booleanArrayOf()
+    private val routeList = mutableListOf<String>()
+    private var visited: BooleanArray = booleanArrayOf()
 
     override fun run() {
-        val tickets = arrayOf(arrayOf("ICN", "JFK"), arrayOf("HND", "IAD"), arrayOf("JFK", "HND"))
-//        mapSolution(tickets)
+        val tickets = arrayOf(
+            arrayOf("ICN", "SFO"),
+            arrayOf("ICN", "ATL"),
+            arrayOf("SFO", "ATL"),
+            arrayOf("ATL", "ICN"),
+            arrayOf("ATL", "SFO"),
+        )
         dfsSolution(tickets)
 
+        val route: String = routeList.minOf { it }
 
+        printAnswer(route)
+        val answer = route.split(",")
         println("answer is ${answer == ANSWER}")
     }
 
-    private fun mapSolution(tickets: Array<Array<String>>) {
-        val map = mutableMapOf<String, String>()
-        tickets.forEach {
-            map[it[0]] = it[1]
-        }
-
-        val builder = StringBuilder()
-        builder.append("ICN")
-        var lastDest = map.remove("ICN")
-        builder.append(",$lastDest")
-
-        while (map.isNotEmpty()) {
-            lastDest = map.remove(lastDest)
-            builder.append(",$lastDest")
-        }
-
-        answer = builder.toString().split(",")
-        printAnswer(builder.toString())
-    }
-
-    private val route = mutableListOf<String>()
-
     private fun dfsSolution(tickets: Array<Array<String>>) {
-        visit = BooleanArray(tickets.size)
+        visited = BooleanArray(tickets.size)
 
-        val ticket = tickets[0]
-        val departure = ticket[0]
-        route.add(departure)
-        dfs(1, departure, tickets)
+        tickets.forEachIndexed { index, ticket ->
+            if (ticket[0] != "ICN") return@forEachIndexed
 
-        answer = route
-        printAnswer(route.joinToString(","))
+            dfs(
+                routes = "ICN",
+                index = index,
+                count = 1,
+                tickets = tickets
+            )
+        }
     }
 
-    private fun dfs(id: Int, destination: String, tickets: Array<Array<String>>) {
-        if (visit[id]) return
+    private fun dfs(
+        routes: String,
+        index: Int,
+        count: Int,
+        tickets: Array<Array<String>>
+    ) {
+        if (visited[index]) return
 
-        visit[id] = true
+        val destination = tickets[index][1]
+
+        if (count == tickets.size) {
+            routeList.add("$routes,$destination")
+            return
+        }
 
         tickets.forEachIndexed { i, ticket ->
-            val dept = ticket[0]
-            val dest = ticket[1]
+            val currDept = ticket[0]
+            if (destination != currDept) return@forEachIndexed
 
-            if (destination == dept) {
-                route.add(dest)
-                dfs(i, dest, tickets)
-            }
+            visited[index] = true
+            dfs(
+                routes = "$routes,$destination",
+                index = i,
+                count = count + 1,
+                tickets = tickets
+            )
+            visited[index] = false
         }
     }
 
     companion object {
-        private val ANSWER = listOf("ICN", "JFK", "HND", "IAD")
+        private val ANSWER = listOf("ICN","ATL","ICN","SFO","ATL","SFO")
     }
 }
