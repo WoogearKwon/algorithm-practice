@@ -3,67 +3,80 @@ package problems.dfs_bfs
 import problems.Problem
 
 class NetworkKt : Problem() {
+    private var visited = booleanArrayOf()
+    private var result = 0
 
     override fun run() {
-//        val n = 4; val answer = 1
-//        val computers = arrayOf(
-//            intArrayOf(1, 1, 1, 1), intArrayOf(1, 1, 0, 0), intArrayOf(1, 0, 1, 0), intArrayOf(1, 0, 0, 1),
-//        )
+        val case = CASES[0]
 
-        val n = 4; val answer = 2
-        val computers = arrayOf(
-            intArrayOf(1, 1, 0, 0), intArrayOf(1, 1, 0, 0), intArrayOf(0, 0, 1, 1), intArrayOf(0, 0, 1, 1),
-        )
-
-        val result = solution(n, computers)
+        sol(case)
         println("result = $result")
-        printAnswer(result == answer)
+        printAnswer(result == case.answer)
     }
 
-    fun solution(n: Int, computers: Array<IntArray>): Int {
-        var answer = n
-        val checked = HashSet<Int>()
+    private fun sol(case: Case) {
+        visited = BooleanArray(case.n)
 
-        for (i in computers.indices) {
-            answer = dfs(i, checked, computers, answer)
+        for (index in case.computers.indices) {
+            if (visited[index]) continue
+
+            visited[index] = true
+            result++
+            dfs(index, case.computers)
         }
-        return answer
     }
 
-    private fun dfs(targetPosition: Int, checked: HashSet<Int>, computers: Array<IntArray>, networks: Int): Int {
-        checked.add(targetPosition)
-        var answer = networks
-        val computer = computers[targetPosition]
+    private fun dfs(index: Int, computers: Array<IntArray>) {
+        val computer = computers[index]
 
-        for (i in computer.indices) {
-            if (computer[i] == 1 && checked.contains(i).not()) {
-                answer = dfs(i, checked, computers, answer - 1)
+        computer.forEachIndexed { i, network ->
+            if (index == i) return@forEachIndexed
+            if (visited[i]) return@forEachIndexed
+
+            if (network == 1) {
+                visited[i] = true
+                dfs(i, computers)
             }
         }
-
-        return answer
     }
 
-    fun solution2(n: Int, computers: Array<IntArray>): Int {
-        var answer = 0
-        val checked = HashSet<Int>()
-        for (i in 0 until n) {
-            if (checked.contains(i).not()) {
-                dfs(computers, checked, i)
-                answer++
-            }
-        }
-
-        return answer
-    }
-
-    private fun dfs(computers: Array<IntArray>, checked: HashSet<Int>, position: Int) {
-        checked.add(position)
-
-        for (i in computers.indices) {
-            if (computers[position][i] == 1 && checked.contains(i).not()) {
-                dfs(computers, checked, i)
-            }
-        }
+    companion object {
+        private val CASES = listOf(
+            Case(
+                n = 3,
+                computers = arrayOf(
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(0, 0, 1),
+                ),
+                answer = 2
+            ),
+            Case(
+                n = 4,
+                computers = arrayOf(
+                    intArrayOf(1, 1, 0, 0),
+                    intArrayOf(1, 1, 0, 0),
+                    intArrayOf(0, 0, 1, 1),
+                    intArrayOf(0, 0, 1, 1),
+                ),
+                answer = 2
+            ),
+            Case(
+                n = 4,
+                computers = arrayOf(
+                    intArrayOf(1, 1, 1, 1),
+                    intArrayOf(1, 1, 0, 0),
+                    intArrayOf(1, 0, 1, 0),
+                    intArrayOf(1, 0, 0, 1),
+                ),
+                answer = 1
+            )
+        )
     }
 }
+
+data class Case(
+    val n: Int,
+    val computers: Array<IntArray>,
+    val answer: Int,
+)
