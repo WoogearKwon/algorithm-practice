@@ -7,20 +7,15 @@ class TravelRouteKt : Problem() {
     private var visited: BooleanArray = booleanArrayOf()
 
     override fun run() {
-        val tickets = arrayOf(
-            arrayOf("ICN", "SFO"),
-            arrayOf("ICN", "ATL"),
-            arrayOf("SFO", "ATL"),
-            arrayOf("ATL", "ICN"),
-            arrayOf("ATL", "SFO"),
-        )
-        dfsSolution(tickets)
+        val case = CASES[0]
+
+        dfsSolution(case.tickets)
 
         val route: String = routeList.minOf { it }
 
         printAnswer(route)
         val answer = route.split(",")
-        println("answer is ${answer == ANSWER}")
+        println("answer is ${answer == case.answer}")
     }
 
     private fun dfsSolution(tickets: Array<Array<String>>) {
@@ -69,6 +64,22 @@ class TravelRouteKt : Problem() {
     }
 
     companion object {
-        private val ANSWER = listOf("ICN","ATL","ICN","SFO","ATL","SFO")
+        private val CASES = listOf(
+            Case(
+                tickets = arrayOf(
+                    arrayOf("ICN", "SFO"),
+                    arrayOf("ICN", "ATL"),
+                    arrayOf("SFO", "ATL"),
+                    arrayOf("ATL", "ICN"),
+                    arrayOf("ATL", "SFO"),
+                ),
+                answer = listOf("ICN", "ATL", "ICN", "SFO", "ATL", "SFO")
+            ),
+        )
     }
+
+    private data class Case(
+        val tickets: Array<Array<String>>,
+        val answer: List<String>
+    )
 }

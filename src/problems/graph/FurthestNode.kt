@@ -21,24 +21,15 @@ class FurthestNode : Problem() {
     private var max = 0
 
     override fun run() {
-        val n = 6
-        val edge = arrayOf(
-            intArrayOf(3, 6),
-            intArrayOf(4, 3),
-            intArrayOf(3, 2),
-            intArrayOf(1, 3),
-            intArrayOf(1, 2),
-            intArrayOf(2, 4),
-            intArrayOf(5, 2),
-        )
+        val case = CASES[0]
 
-        initGraph(n, edge)
+        initGraph(case.n, case.edge)
         bfs()
 
         val count = dist.count { it == max }
 
         printAnswer(count.toString())
-        println("Your answer is ${ANSWER == count}")
+        println("Your answer is ${case.answer == count}")
     }
 
     // 인접리스트 초기화
@@ -82,6 +73,26 @@ class FurthestNode : Problem() {
     }
 
     companion object {
-        private const val ANSWER = 3
+        private val CASES = listOf(
+            Case(
+                n = 6,
+                edge = arrayOf(
+                    intArrayOf(3, 6),
+                    intArrayOf(4, 3),
+                    intArrayOf(3, 2),
+                    intArrayOf(1, 3),
+                    intArrayOf(1, 2),
+                    intArrayOf(2, 4),
+                    intArrayOf(5, 2),
+                ),
+                answer = 3
+            )
+        )
     }
+
+    private data class Case(
+        val n: Int,
+        val edge: Array<IntArray>,
+        val answer: Int
+    )
 }

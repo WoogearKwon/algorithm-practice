@@ -73,10 +73,10 @@ class NetworkKt : Problem() {
             )
         )
     }
-}
 
-data class Case(
-    val n: Int,
-    val computers: Array<IntArray>,
-    val answer: Int,
-)
+    private data class Case(
+            val n: Int,
+            val computers: Array<IntArray>,
+            val answer: Int,
+    )
+}
