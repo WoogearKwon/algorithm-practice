@@ -58,13 +58,13 @@ public class Main {
         problems.put(20, new Carpet());
         problems.put(21, new TargetNumber());
         problems.put(22, new TargetNumberKt());
-        problems.put(23, new Network());
-        problems.put(24, new ConvertingWord());
-        problems.put(25, new TravelRoute());
-        problems.put(26, new TravelRouteKt());
-        problems.put(27, new KeypadClickKt());
-        problems.put(28, new PickAndPlusKt());
-        problems.put(29, new ConvertingWordsKt());
+        problems.put(23, new ConvertingWordsKt());
+        problems.put(24, new Network());
+        problems.put(25, new ConvertingWord());
+        problems.put(26, new TravelRoute());
+        problems.put(27, new TravelRouteKt());
+        problems.put(28, new KeypadClickKt());
+        problems.put(29, new PickAndPlusKt());
 
         problems.put(30, new HouseOneKt());
         problems.put(31, new HouseTwoKt());
