@@ -8,7 +8,7 @@ import java.util.HashMap;
  * 완주하지 못한 선수
  * Refer to link below
  * https://programmers.co.kr/learn/courses/30/lessons/42576
- * */
+ */
 public class Marathon extends Problem {
     @Override
     public void run() {
@@ -38,7 +38,7 @@ public class Marathon extends Problem {
         String answer = "";
 
         HashMap<String, Integer> map = new HashMap<>();
-        for (String completed: completion) {
+        for (String completed : completion) {
             if (map.containsKey(completed)) {
                 map.put(completed, map.get(completed) + 1);
             } else {
@@ -47,11 +47,10 @@ public class Marathon extends Problem {
         }
 
         for (String participated : participant) {
-            if (map.get(participated) == null || map.get(participated) == 0){
+            if (map.get(participated) == null || map.get(participated) == 0) {
                 answer = participated;
                 break;
-            }
-            else map.put(participated, map.get(participated) - 1);
+            } else map.put(participated, map.get(participated) - 1);
         }
 
         return answer;
@@ -67,7 +66,7 @@ public class Marathon extends Problem {
         for (String player : completion) hm.put(player, hm.get(player) - 1);
 
         for (String key : hm.keySet()) {
-            if (hm.get(key) != 0){
+            if (hm.get(key) != 0) {
                 answer = key;
             }
         }

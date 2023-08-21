@@ -5,23 +5,23 @@ import java.util.Arrays;
 public abstract class Problem implements Testable {
     private final String printAnswerFormat = getClass().getSimpleName() + " 정답:\n";
 
-    protected void printAnswer (int result) {
+    protected void printAnswer(int result) {
         System.out.println(printAnswerFormat + result);
     }
 
-    protected void printAnswer (int[] result) {
+    protected void printAnswer(int[] result) {
         System.out.println(printAnswerFormat + Arrays.toString(result));
     }
 
-    protected void printAnswer (String result) {
+    protected void printAnswer(String result) {
         System.out.println(printAnswerFormat + result);
     }
 
-    protected void printAnswer (String[] result) {
+    protected void printAnswer(String[] result) {
         System.out.println(printAnswerFormat + Arrays.toString(result));
     }
 
-    protected void printAnswer (boolean result) {
+    protected void printAnswer(boolean result) {
         System.out.println(printAnswerFormat + result);
     }
 }

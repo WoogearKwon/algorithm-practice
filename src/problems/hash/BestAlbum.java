@@ -10,15 +10,15 @@ import java.util.stream.IntStream;
  * <베스트 앨범/>
  * 문제 설명: 장르별로 가장 많이 재생된 노래를 두 개씩 모아 베스트앨범을 출시하려고 한다.
  * 베스트 앨범에 들어갈 노래의 고유 번호를 순서대로 return하도록 solution 함수를 완성하라.
- *
+ * <p>
  * <문제 원본 링크/>
  * https://programmers.co.kr/learn/courses/30/lessons/42579?language=java
- *
+ * <p>
  * <노래 수록 기준/>
  * 1. 속한 노래가 많이 재생된 장르를 먼저 수록
  * 2. 장르 내에서 많이 재생된 노래를 먼저 수록
  * 3. 장르 내에서 재생 횟수가 같은 노래 중에서는 고유번호가 낮은 노래를 먼저 수록
- *
+ * <p>
  * <제한사항/>
  * 1. genres[i]는 고유번호가 i인 노래장르
  * 2. plays[i]는 고유번호가 i인 노래가 재생된 횟수
@@ -26,7 +26,7 @@ import java.util.stream.IntStream;
  * 4. 장르 종류는 100개 미만
  * 5. 장르에 속한 곡이 하나라면, 하나의 곡만 선택
  * 6. 모든 장르는 재생된 횟수가 다름
- * */
+ */
 public class BestAlbum extends Problem {
     String[] genres = {"classic", "pop", "classic", "classic", "pop"};
     int[] plays = {500, 600, 150, 800, 2500}; // return {4, 1, 3, 0}
@@ -64,8 +64,8 @@ public class BestAlbum extends Problem {
                 for (int j = 0; j < genres.length; j++) {
                     // indexOfBest에 들어갈 index찾기
                     if (indexOfPlays.containsKey(j) &&
-                            genres[j].equals(genre) &&
-                            plays[j] > biggestPlays) {
+                        genres[j].equals(genre) &&
+                        plays[j] > biggestPlays) {
                         index = j;
                         biggestPlays = plays[j];
                     }
@@ -82,15 +82,15 @@ public class BestAlbum extends Problem {
      * 다른 사람의 풀이
      * 재미있게도, Music클래스를 만들고 Comparable을 구현해서 관리하기가 쉽게했다.
      * 그러나 풀이 속도는 내 코드가 낫다.
-     * */
+     */
     public int[] solution2(String[] genres, int[] plays) {
         return IntStream.range(0, genres.length)
-                .mapToObj(i -> new Music(genres[i], plays[i], i))
-                .collect(Collectors.groupingBy(Music::getGenre))
-                .entrySet().stream()
-                .sorted((a, b) -> sum(b.getValue()) - sum(a.getValue()))
-                .flatMap(x -> x.getValue().stream().sorted().limit(2))
-                .mapToInt(x -> x.id).toArray();
+            .mapToObj(i -> new Music(genres[i], plays[i], i))
+            .collect(Collectors.groupingBy(Music::getGenre))
+            .entrySet().stream()
+            .sorted((a, b) -> sum(b.getValue()) - sum(a.getValue()))
+            .flatMap(x -> x.getValue().stream().sorted().limit(2))
+            .mapToInt(x -> x.id).toArray();
     }
 
     private int sum(List<Music> value) {
@@ -101,7 +101,7 @@ public class BestAlbum extends Problem {
         return answer;
     }
 
-    public static class Music implements Comparable<Music>{
+    public static class Music implements Comparable<Music> {
         private final int played;
         private final int id;
         private final String genre;
@@ -114,10 +114,12 @@ public class BestAlbum extends Problem {
 
         @Override
         public int compareTo(Music other) {
-            if(this.played == other.played) return this.id - other.id;
+            if (this.played == other.played) return this.id - other.id;
             return other.played - this.played;
         }
 
-        public String getGenre() {return genre;}
+        public String getGenre() {
+            return genre;
+        }
     }
 }

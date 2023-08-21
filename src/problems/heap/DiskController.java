@@ -2,7 +2,9 @@ package problems.heap;
 
 import problems.Problem;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * <디스크 컨트롤러/>
@@ -10,22 +12,21 @@ import java.util.*;
  * 작업의 요청부터 종료까지 걸린 시간의 평균을 가장 줄이는 방법으로 처리하면 평균이 얼마가 되는지
  * return하는 solution함수를 작성해주세요.
  * (단, 소수점 이하의 수는 버린다.)
- *
+ * <p>
  * <문제 원본 링크/>
  * https://programmers.co.kr/learn/courses/30/lessons/42627
- *
+ * <p>
  * <제한 사항/>
  * - jobs의 길이는 1 이상 500 이하
  * - jobs의 길이는 하나의 작업에 대한 [작업이 요청되는 시점, 작업의 소요시간]이다.
  * - 각 작업에 대해 작업이 요청되는 시간은 0 이상, 1,000이하
  * - 각 작업에 대해 작업의 소요시간은 1 이상, 1,000이하
  * - 하드디스크가 작업을 수행하고 있지 않을 때에는 먼저 요청이 들어온 작업부터 처리
- *
- * */
+ */
 public class DiskController extends Problem {
     @Override
     public void run() {
-        int[][] jobs = {{0,3}, {1,9}, {2,6}}; // return = 9
+        int[][] jobs = {{0, 3}, {1, 9}, {2, 6}}; // return = 9
         printAnswer(solution(jobs));
     }
 
@@ -36,11 +37,11 @@ public class DiskController extends Problem {
      * 문제의 정확한 이해와 집중력이 부족했다.
      * 아래의 링크를 참고해 약간 수정했다.
      * https://codevang.tistory.com/316
-     *
+     * <p>
      * 1. 요청시간부터 종료까지 가장 짧게 배치하기 위해서는 수행시간이 짧은 작업부터 처리해야 한다.
      * 2. 그러나 무작정 요청시간이 짧은 작업을 먼저 처리하는 것이 아니라, 하나의 작업이 끝나는 시점까지
      * 들어온 요청 중 가장 짧은 작업을 선택해야 한다. 즉 우선순위를 계산해야 한다.
-     * */
+     */
     public int solution(int[][] jobs) {
         int answer = 0; // 처리되는데 걸린 누적 시간
         int duration = 0; // 현재까지 소요 시간
@@ -69,7 +70,7 @@ public class DiskController extends Problem {
                 int[] temp = pq.poll();
                 answer += temp[1] + duration - temp[0];
                 duration += temp[1];
-                count ++;
+                count++;
             }
         }
 

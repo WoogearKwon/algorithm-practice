@@ -10,7 +10,7 @@ import java.util.List;
  * 가장 큰수
  * Refer to link below
  * https://programmers.co.kr/learn/courses/30/lessons/42746?language=java
- * */
+ */
 public class BiggestNumber extends Problem {
     @Override
     public void run() {
@@ -29,7 +29,7 @@ public class BiggestNumber extends Problem {
         Arrays.sort(arr, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
 
         // 입력값이 {0,0,0,0,}일 경우 0000이 아닌 0으로 리턴
-        if(arr[0].equals("0")) return "0";
+        if (arr[0].equals("0")) return "0";
 
         StringBuilder sb = new StringBuilder();
         for (String s : arr) sb.append(s);
@@ -53,11 +53,11 @@ public class BiggestNumber extends Problem {
 
         StringBuilder sb = new StringBuilder();
 
-        for(Integer i : list) sb.append(i);
+        for (Integer i : list) sb.append(i);
 
         answer = sb.toString();
 
-        if(answer.charAt(0) == '0') return "0";
+        if (answer.charAt(0) == '0') return "0";
         else return answer;
     }
 }

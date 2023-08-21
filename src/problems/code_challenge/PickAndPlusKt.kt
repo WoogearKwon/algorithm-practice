@@ -5,8 +5,8 @@ import problems.Problem
 class PickAndPlusKt : Problem() {
 
     override fun run() {
-        val numbers = intArrayOf(5,0,2,7)
-        val answer = intArrayOf(2,5,7,9,12)
+        val numbers = intArrayOf(5, 0, 2, 7)
+        val answer = intArrayOf(2, 5, 7, 9, 12)
 
         val result = solution(numbers)
         printAnswer(result.contentEquals(answer))

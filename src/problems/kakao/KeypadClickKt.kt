@@ -39,7 +39,7 @@ class KeypadClickKt : Problem() {
                     leftFingerP = number
                 }
                 3, 6, 9 -> {
-                    answer +="R"
+                    answer += "R"
                     rightFingerP = number
                 }
                 else -> {

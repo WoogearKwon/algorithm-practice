@@ -8,7 +8,7 @@ import java.util.Arrays;
  * K번째수
  * Refer to link below
  * https://programmers.co.kr/learn/courses/30/lessons/42748
- * */
+ */
 public class NumberInK extends Problem {
     @Override
     public void run() {
@@ -54,7 +54,7 @@ public class NumberInK extends Problem {
         while (k < n - 1) {
             int last = n - 1;
 
-            for (int i = n - 1; i > k ; i--) {
+            for (int i = n - 1; i > k; i--) {
                 if (array[i - 1] > array[i]) {
                     swap(array, i - 1, i);
                     last = i;
@@ -66,7 +66,7 @@ public class NumberInK extends Problem {
     }
 
     private void swap(int[] arr, int a, int b) {
-        int t= arr[a];
+        int t = arr[a];
         arr[a] = arr[b];
         arr[b] = t;
     }
@@ -76,10 +76,10 @@ public class NumberInK extends Problem {
     public int[] solution2(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
-        for(int i=0; i<commands.length; i++){
-            int[] temp = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+        for (int i = 0; i < commands.length; i++) {
+            int[] temp = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);
             Arrays.sort(temp);
-            answer[i] = temp[commands[i][2]-1];
+            answer[i] = temp[commands[i][2] - 1];
         }
 
         return answer;

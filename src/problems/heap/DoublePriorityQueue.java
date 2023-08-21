@@ -2,7 +2,8 @@ package problems.heap;
 
 import problems.Problem;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.PriorityQueue;
 
 /**
  * <이중우선순위큐/>
@@ -10,21 +11,20 @@ import java.util.*;
  * I 숫자: 큐에 주어진 숫자를 삽압
  * D 1: 큐에서 최댓값을 삭제
  * D -1: 큐에서 최솟값을 삭제
- *
+ * <p>
  * 이중우선순위큐가 수행할 연산 operations가 매개변수로 주어질 때, 모든 연산을 처리한 후 큐가 비어있으면 [0,0]
  * 비어있지 않으면 [최닷값, 최솟값]을 리턴하도록 solution함수를 구현하세요.
- *
+ * <p>
  * <문제 원본 링크/>
  * https://programmers.co.kr/learn/courses/30/lessons/42628
- *
+ * <p>
  * <제한사항/>
  * - operations는 길이가 1 이상 1,000,000 이하인 문자열 배열
  * - operations의 원소는 큐가 수행할 연산을 나타냄
  * - 원소는 "명령어 데이터 형식으로 주어짐
  * - 최댓값/최솟값을 삭제하는 연산에서 최댓값/최솟값이 둘 이상인 경우, 하나만 삭제한다.
  * 빈 큐에 데이터를 삭제하라는 연산이 주어질 경우 해당 연산은 무시
- *
- * */
+ */
 public class DoublePriorityQueue extends Problem {
     @Override
     public void run() {
@@ -44,7 +44,7 @@ public class DoublePriorityQueue extends Problem {
      * 4. D이면 음수인지 양수인지 구분해서 음수이면 최솟값을 삭제, 양수이면 최댓값을 삭제한다.
      * -- 최솟값은 queue에서, 최댓값은 reverseQueue에서 삭제한다.
      * 5. 큐가 비었으면 [0,0]을 리턴하고 아니면 각 큐의 값을 하나씩 poll하여 리턴한다.
-     * */
+     */
     public int[] solution(String[] operations) {
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         PriorityQueue<Integer> reverseQueue = new PriorityQueue<>(Collections.reverseOrder());

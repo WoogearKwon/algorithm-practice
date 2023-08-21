@@ -9,11 +9,11 @@ import java.util.*;
  * 두 개 뽑아서 더하기
  * Refer to link below
  * [https://programmers.co.kr/learn/courses/30/lessons/68644]
- * */
+ */
 public class PickAndPlus extends Problem {
     @Override
     public void run() {
-        int[] numbers = {12,44,3,2,99,7,34,57,43,100,11,53,24,2,1,3,4,1};
+        int[] numbers = {12, 44, 3, 2, 99, 7, 34, 57, 43, 100, 11, 53, 24, 2, 1, 3, 4, 1};
 //        int[] numbers = {2,1,3,4,1}; // result = [2,3,4,5,6,7]
 //        int[] numbers = {5,0,2,7}; // result = [2,5,7,9,12]
         printAnswer(solution(numbers));

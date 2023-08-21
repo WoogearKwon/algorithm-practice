@@ -6,7 +6,7 @@ import problems.Problem;
  * 키패드 누르기
  * Refer to link below
  * [https://programmers.co.kr/learn/courses/30/lessons/67256]
- * */
+ */
 public class KeypadClick extends Problem {
     @Override
     public void run() {
@@ -37,13 +37,13 @@ public class KeypadClick extends Problem {
                 leftPositionX = 0;
                 leftPositionY = getY(number);
 
-            // 오른쪽 1열 중에 하나를 누르는 경우
+                // 오른쪽 1열 중에 하나를 누르는 경우
             } else if (number == 3 || number == 6 || number == 9) {
                 answer.append("R");
                 rightPositionX = 2;
                 rightPositionY = getY(number);
 
-            // 가운데 열 중에 하나를 누르는 경우
+                // 가운데 열 중에 하나를 누르는 경우
             } else {
                 int y = getY(number);
 
@@ -56,13 +56,13 @@ public class KeypadClick extends Problem {
                     rightPositionX = 1;
                     rightPositionY = y;
 
-                // 왼쪽이 가까운 경우
+                    // 왼쪽이 가까운 경우
                 } else if (distanceLeft < distanceRight) {
                     answer.append("L");
                     leftPositionX = 1;
                     leftPositionY = y;
 
-                // 타겟으로부터 왼손 오른손 거리가 같은 경우
+                    // 타겟으로부터 왼손 오른손 거리가 같은 경우
                 } else {
 
                     // 오른손잡이
@@ -70,7 +70,7 @@ public class KeypadClick extends Problem {
                         answer.append("R");
                         rightPositionX = 1;
                         rightPositionY = y;
-                    // 왼손잡이
+                        // 왼손잡이
                     } else {
                         answer.append("L");
                         leftPositionX = 1;

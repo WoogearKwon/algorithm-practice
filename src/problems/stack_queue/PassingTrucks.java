@@ -10,9 +10,9 @@ import java.util.Queue;
 /**
  * <문제 원본 링크/>
  * https://programmers.co.kr/learn/courses/30/lessons/42583
- *
+ * <p>
  * <다리를 지나는 트럭/>
- * */
+ */
 public class PassingTrucks extends Problem {
 
     private static class TruckTestCase {
@@ -49,7 +49,7 @@ public class PassingTrucks extends Problem {
      * 3. 다리위 트럭들의 무게의 합을 구한다.
      * 4. 다리위 트럭의 위치 +1
      * 5. 다리의 무게에 여유가 있으면 새로운 트럭이 건너기 시작한다.
-     * */
+     */
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
 

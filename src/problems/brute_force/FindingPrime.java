@@ -7,16 +7,16 @@ import java.util.HashSet;
 /**
  * <문제 원본 링크/>
  * https://programmers.co.kr/learn/courses/30/lessons/42839
- *
+ * <p>
  * <소수 찾기/>
  * 각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때,
  * 종이 조각으로 만들 수 있는 소수가 몇개인지 return 하도록 solution 함수를 완성하세요.
- *
+ * <p>
  * <제한 사항/>
  * numbers는 길이 1 이상 7 이하인 문자열이다.
  * numbers는 0~9 까지 숫자만으로 이루어져있다.
  * "013"은 0, 1, 3 숫자가 적힌 종이 조가각이 흩어져있다는 의미이다.
- * */
+ */
 public class FindingPrime extends Problem {
     @Override
     public void run() {
@@ -33,7 +33,7 @@ public class FindingPrime extends Problem {
      * - 순열알고리즘을 사용하여 배열안에 든 모든 숫자를 조합한다.
      * - 조합한 숫자가 소수인지 확인하여 소수이면 set에 저장한다.
      * - set의 size를 리턴한다.
-     * */
+     */
     public int solution(String numbers) {
         HashSet<Integer> set = new HashSet<>();
 
@@ -48,12 +48,12 @@ public class FindingPrime extends Problem {
     /**
      * <순열 알고리즘/>
      * 참고: https://gorakgarak.tistory.com/522
-     *
+     * <p>
      * arr: 데이터를 가지고 있으면서 순서를 교환하는 배열
      * depth: 현재 트리구조에서 어떤 깊이에서 교환작업을 하고있는지를 확인하는 변수
      * n: 총 배열안에 들어있는 숫자, 고정값
      * k: 선택할 숫자의 개수
-     * */
+     */
     private void perm(String[] arr, int depth, int n, int k, HashSet<Integer> set) {
         StringBuilder numb = new StringBuilder();
         if (depth == k) { // depth가 k에 도달하면 사이클이 한 번 끝.
@@ -95,10 +95,10 @@ public class FindingPrime extends Problem {
      * <다른 사람의 풀이/>
      * 나는 set에 중복되지 않는 소수를 넣었지만
      * 이 풀이에서는 모든 순열 조합의 숫자를 set에 넣은 후에 소수인지 검사한다.
-     *
+     * <p>
      * 그리고 순열 조합을 만드는 로직이 상당히 단순하다.
      * 내가 사용한 재귀호출에 비해 훨씬 쉽다.
-     * */
+     */
     public int solution2(String numbers) {
         HashSet<Integer> set = new HashSet<>();
         permutation("", numbers, set);
@@ -106,8 +106,8 @@ public class FindingPrime extends Problem {
         while (set.iterator().hasNext()) {
             int a = set.iterator().next();
             set.remove(a);
-            if(a == 2) count++;
-            if(a % 2 != 0 && isPrime(a)) {
+            if (a == 2) count++;
+            if (a % 2 != 0 && isPrime(a)) {
                 count++;
             }
         }
@@ -125,7 +125,7 @@ public class FindingPrime extends Problem {
 
     public void permutation(String prefix, String str, HashSet<Integer> set) {
         int n = str.length();
-        if(!prefix.equals("")) set.add(Integer.valueOf(prefix));
+        if (!prefix.equals("")) set.add(Integer.valueOf(prefix));
 
         for (int i = 0; i < n; i++) {
             permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n), set);
