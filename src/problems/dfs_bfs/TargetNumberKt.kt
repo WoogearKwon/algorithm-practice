@@ -9,7 +9,7 @@ class TargetNumberKt : Problem() {
         val target = 3
 
         val result = dfs(0, numbers, 0, target)
-        printAnswer(result)
+        printResult(result)
     }
 
     private fun dfs(n: Int, numbers: IntArray, sum: Int, target: Int): Int {

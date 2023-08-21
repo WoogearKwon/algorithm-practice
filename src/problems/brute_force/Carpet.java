@@ -14,7 +14,7 @@ public class Carpet extends Problem {
         int brown = 24;
         int yellow = 24; // return [8,6];
 
-        printAnswer(solution(brown, yellow));
+        printResult(solution(brown, yellow));
     }
 
     public int[] solution(int brown, int yellow) {

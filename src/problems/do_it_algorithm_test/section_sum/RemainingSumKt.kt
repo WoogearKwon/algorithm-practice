@@ -40,7 +40,7 @@ class RemainingSumKt : Problem() {
             }
         }
 
-        printAnswer(answer.toString())
+        printResult(answer.toString())
         println("answer is ${ANSWER == answer}")
     }
 

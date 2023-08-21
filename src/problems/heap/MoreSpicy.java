@@ -28,7 +28,7 @@ public class MoreSpicy extends Problem {
     public void run() {
         int[] scoville = {1, 2, 3, 9, 10, 12};
         int k = 7; // answer = 2
-        printAnswer(solution(scoville, k));
+        printResult(solution(scoville, k));
     }
 
     /**

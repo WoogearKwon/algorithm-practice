@@ -13,7 +13,7 @@ class HouseOneKt : Problem() {
             "Time 5: Go straight 500m and turn left"
         )
 
-        printAnswer(result.contentEquals(answer))
+        printResult(result.contentEquals(answer))
     }
 
     fun solution(path: String): Array<String> {

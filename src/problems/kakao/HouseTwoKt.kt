@@ -23,7 +23,7 @@ class HouseTwoKt : Problem() {
 
         val result = solution(template, variables)
         println("result = $result")
-        printAnswer(answer == result)
+        printResult(answer == result)
     }
 
     fun solution(tstring: String, variables: Array<Array<String>>): String {

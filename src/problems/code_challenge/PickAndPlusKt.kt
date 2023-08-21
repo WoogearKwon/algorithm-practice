@@ -9,7 +9,7 @@ class PickAndPlusKt : Problem() {
         val answer = intArrayOf(2, 5, 7, 9, 12)
 
         val result = solution(numbers)
-        printAnswer(result.contentEquals(answer))
+        printResult(result.contentEquals(answer))
     }
 
     fun solution(numbers: IntArray): IntArray {

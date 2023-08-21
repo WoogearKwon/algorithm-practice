@@ -10,7 +10,7 @@ class KeypadClickKt : Problem() {
         val answer = "LRLLLRLLRRL"
 
         val result = solution(numbers, hand)
-        printAnswer(result == answer)
+        printResult(result == answer)
     }
 
     /**

@@ -36,7 +36,7 @@ public class PassingTrucks extends Problem {
         truckTestCases.add(new TruckTestCase(100, 100, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10})); // return 110
         TruckTestCase truckTestCase = truckTestCases.get(0);
 
-        printAnswer(solution(truckTestCase.bridge_length, truckTestCase.bridge_weight, truckTestCase.truck_weights));
+        printResult(solution(truckTestCase.bridge_length, truckTestCase.bridge_weight, truckTestCase.truck_weights));
     }
 
     /**

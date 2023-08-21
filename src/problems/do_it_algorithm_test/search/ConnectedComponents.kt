@@ -32,7 +32,7 @@ class ConnectedComponents : Problem() {
             }
         }
 
-        printAnswer(count.toString())
+        printResult(count.toString())
         println("Your answer is ${ANSWER == count}")
     }
 

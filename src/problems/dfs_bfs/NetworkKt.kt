@@ -11,7 +11,7 @@ class NetworkKt : Problem() {
 
         sol(case)
         println("result = $result")
-        printAnswer(result == case.answer)
+        printResult(result == case.answer)
     }
 
     private fun sol(case: Case) {

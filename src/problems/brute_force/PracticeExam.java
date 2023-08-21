@@ -33,7 +33,7 @@ public class PracticeExam extends Problem {
         int[] answers = {1, 3, 2, 4, 2}; // return = {1,2,3}
 //        int[] answers = {3,1,5,1,3,5,2,1,5,3,4,2}; // return = {3}
 
-        printAnswer(solution(answers));
+        printResult(solution(answers));
     }
 
     /**

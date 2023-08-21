@@ -18,7 +18,7 @@ public class PhoneNumbers extends Problem {
         String[] phoneBook = {"123", "456", "789"}; // answer = true
 //        String[] phoneBook = {"12","123","1235","567","88"}; // answer = false
 
-        printAnswer(solution2(phoneBook));
+        printResult(solution2(phoneBook));
     }
 
     /**

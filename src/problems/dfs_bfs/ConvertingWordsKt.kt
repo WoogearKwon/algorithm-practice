@@ -12,7 +12,7 @@ class ConvertingWordsKt : Problem() {
         val answer = 4
 
         val result = solution(begin, target, words)
-        printAnswer(answer == result)
+        printResult(answer == result)
     }
 
     fun solution(begin: String, target: String, words: Array<String>): Int {

@@ -42,7 +42,7 @@ public class Printer extends Problem {
         testCases.add(new PrintingListCase(new int[]{1, 1, 9, 1, 1, 1}, 0)); // return 5
         PrintingListCase myCase = testCases.get(1);
 
-        printAnswer(solution(myCase.priorities, myCase.location));
+        printResult(solution(myCase.priorities, myCase.location));
     }
 
     /**

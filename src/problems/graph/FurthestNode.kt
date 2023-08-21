@@ -28,7 +28,7 @@ class FurthestNode : Problem() {
 
         val count = dist.count { it == max }
 
-        printAnswer(count.toString())
+        printResult(count.toString())
         println("Your answer is ${case.answer == count}")
     }
 

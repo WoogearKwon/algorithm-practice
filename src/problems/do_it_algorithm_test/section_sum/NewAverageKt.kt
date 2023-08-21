@@ -26,7 +26,7 @@ class NewAverageKt : Problem() {
 
         val result: Float = (sum * 100f / max / n)
 
-        printAnswer(result.toString())
+        printResult(result.toString())
         println("answer is ${result == answer}")
     }
 }

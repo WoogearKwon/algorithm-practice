@@ -13,7 +13,7 @@ class TravelRouteKt : Problem() {
 
         val route: String = routeList.minOf { it }
 
-        printAnswer(route)
+        printResult(route)
         val answer = route.split(",")
         println("answer is ${answer == case.answer}")
     }

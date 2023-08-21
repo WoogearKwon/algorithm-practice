@@ -24,7 +24,7 @@ public class Marathon extends Problem {
         String[] participant = {"mislav", "stanko", "mislav", "ana", "mislav"};
         String[] completion = {"stanko", "ana", "mislav", "mislav"}; // answer = "mislev"
 
-        printAnswer(solution(participant, completion));
+        printResult(solution(participant, completion));
     }
 
     // 사람의 이름을 HashMap의 Key로 하면 동명이인 2명까지는 문제가 없지만 3명 이상 있을 경우 찾지 못함

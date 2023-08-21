@@ -23,7 +23,7 @@ public class StockPrice extends Problem {
     public void run() {
         int[] prices = {1, 2, 3, 2, 3}; // return = [4,3,1,1,0]
 
-        printAnswer(solution(prices));
+        printResult(solution(prices));
     }
 
     /**

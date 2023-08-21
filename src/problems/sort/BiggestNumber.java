@@ -17,7 +17,7 @@ public class BiggestNumber extends Problem {
         int[] numbers = {6, 10, 2}; // answer = "6210"
 //        int[] numbers = {3, 30, 34, 5, 9}; // answer = "9534330
 
-        printAnswer(solution(numbers));
+        printResult(solution(numbers));
     }
 
     public String solution(int[] numbers) {

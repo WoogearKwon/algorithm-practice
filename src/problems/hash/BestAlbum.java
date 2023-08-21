@@ -33,7 +33,7 @@ public class BestAlbum extends Problem {
 
     @Override
     public void run() {
-        printAnswer(solution(genres, plays));
+        printResult(solution(genres, plays));
     }
 
     // 첫번째 시도 : 성공률 20% (실수: treeMap이 아닌 playSums로 for문 실행)

@@ -33,7 +33,7 @@ public class TravelRoute extends Problem {
 //        String[][] tickets = {{"ICN", "COO"}, {"COO", "ICN"}, {"COO", "ICN"}, {"ICN", "COO"}, {"ICN", "AAA"}};
         //return = [ICN, AAA, COO, COOO, ICN, ICN];
 
-        printAnswer(solution(tickets));
+        printResult(solution(tickets));
     }
 
     boolean[] check;

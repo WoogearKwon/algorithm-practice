@@ -28,7 +28,7 @@ public class Camouflage extends Problem {
         String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}}; // return 5
 //        String[][] clothes = {{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}}; // return 3
 
-        printAnswer(solution2(clothes));
+        printResult(solution2(clothes));
     }
 
     /**

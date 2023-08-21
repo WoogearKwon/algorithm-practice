@@ -21,7 +21,7 @@ public class KakaoCranePick extends Problem {
         };
         int[] moves = {1, 5, 3, 5, 1, 2, 1, 4};
 
-        printAnswer(solution(board, moves));
+        printResult(solution(board, moves));
     }
 
     // My solution

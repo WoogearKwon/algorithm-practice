@@ -28,7 +28,7 @@ public class ConvertingWord extends Problem {
         String target = "cog";
         String[] words = {"hot", "dot", "dog", "lot", "log", "cog"}; // return = 4
 
-        printAnswer(solution(begin, target, words));
+        printResult(solution(begin, target, words));
     }
 
     private int answer = 51; // 최대 단어수 = 50

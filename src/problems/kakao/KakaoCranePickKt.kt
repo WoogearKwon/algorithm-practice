@@ -16,7 +16,7 @@ class KakaoCranePickKt : Problem() {
         val sequence = intArrayOf(1, 5, 3, 5, 1, 2, 1, 4) // answer = 4
 
         val answer = solution2(board, sequence)
-        printAnswer(answer)
+        printResult(answer)
     }
 
     private fun solution(board: Array<IntArray>, moves: IntArray): Int {

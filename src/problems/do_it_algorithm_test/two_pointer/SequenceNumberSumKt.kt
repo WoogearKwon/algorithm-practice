@@ -48,7 +48,7 @@ class SequenceNumberSumKt : Problem() {
             }
         }
 //
-        printAnswer(count.toString())
+        printResult(count.toString())
         println("answer is ${ANSWER == count}")
     }
 

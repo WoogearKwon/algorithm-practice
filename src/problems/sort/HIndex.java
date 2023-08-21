@@ -14,7 +14,7 @@ public class HIndex extends Problem {
     public void run() {
         int[] citations = {3, 0, 6, 1, 5};
 
-        printAnswer(solution(citations));
+        printResult(solution(citations));
     }
 
     // 발표한 논문 n편 중 h번 이상 인용된 논문이 h편 이상이고,
