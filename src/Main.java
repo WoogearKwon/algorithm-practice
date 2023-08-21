@@ -75,6 +75,7 @@ public class Main {
         problems.put(36, new SequenceNumberSumKt());
         problems.put(37, new FurthestNode());
         problems.put(38, new ConnectedComponents());
+        problems.put(39, new GameMapShortestDistance());
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
