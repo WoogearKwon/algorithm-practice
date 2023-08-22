@@ -2,9 +2,7 @@ package problems.dfs_bfs;
 
 import problems.Problem;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -13,7 +11,7 @@ import java.util.List;
  */
 
 public class GameMapShortestDistance extends Problem {
-    private final List<Integer> counts = new ArrayList<>();
+    private int distance = 0;
     private int[][] maps;
     private boolean[][] visited;
 
@@ -21,42 +19,46 @@ public class GameMapShortestDistance extends Problem {
     public void run() {
         Case testCase = cases.get(1);
 
-        int result = solution(testCase.maps);
+        int result = solution1(testCase.maps);
         int answer = testCase.answer;
 
         printResult(result);
         System.out.println("answer is " + answer);
     }
 
-    public int solution(int[][] maps) {
+    /**
+     * 아래의 방법으로 문제 풀이는 가능하나 효율성 테스트에서 4개 모두 시간초과로 실패
+     * */
+    public int solution1(int[][] maps) {
         this.maps = maps;
-        visited = new boolean[maps[0].length][maps.length];
+        visited = new boolean[maps.length][maps[0].length];
 
-        dfs(1, 0, 0, maps[0].length - 1, maps.length - 1);
+        dfs1(1, 0, 0, maps.length - 1, maps[0].length - 1);
 
-        if (counts.isEmpty()) {
+        if (distance == 0) {
             return -1;
         } else {
-            Collections.sort(counts);
-            return counts.get(0);
+            return distance;
         }
     }
 
-    private void dfs(int count, int x, int y, int mX, int mY) {
+    private void dfs1(int count, int x, int y, int mX, int mY) {
         if (x < 0 || y < 0 || x > mX || y > mY) return;
         if (maps[x][y] == 0) return;
         if (visited[x][y]) return;
 
+        System.out.println("dfs,,count = " + count + "..." + x + "," + y);
+
         if (x == mX && y == mY) {
-            counts.add(count);
+            distance = (distance == 0) ? count : Math.min(distance, count);
             return;
         }
 
         visited[x][y] = true;
-        dfs(count + 1, x - 1, y, mX, mY);
-        dfs(count + 1, x + 1, y, mX, mY);
-        dfs(count + 1, x, y - 1, mX, mY);
-        dfs(count + 1, x, y + 1, mX, mY);
+        dfs1(count + 1, x - 1, y, mX, mY);
+        dfs1(count + 1, x + 1, y, mX, mY);
+        dfs1(count + 1, x, y - 1, mX, mY);
+        dfs1(count + 1, x, y + 1, mX, mY);
         visited[x][y] = false;
     }
 
@@ -89,7 +91,7 @@ public class GameMapShortestDistance extends Problem {
                 {1, 1, 1, 0, 1, 1},
                 {0, 0, 0, 0, 0, 1}
             },
-            13
+            12
         )
     );
 }
