@@ -28,11 +28,15 @@ public class GameMapShortestDistance extends Problem {
      * BFS 풀이방식
      */
     public int solution2(int[][] maps) {
+        int maxX = maps[0].length - 1;
+        int maxY = maps.length - 1;
+
+        int[][] distances = new int[maps[0].length][maps.length];
         int[] dx = {0, 0, 1, -1};
         int[] dy = {-1, 1, 0, 0};
-        int[][] distances = new int[maps[0].length][maps.length];
 
         Queue<int[]> q = new LinkedList<>();
+
         q.add(new int[]{0, 0});
         distances[0][0] = 1;
 
@@ -45,9 +49,7 @@ public class GameMapShortestDistance extends Problem {
                 int nx = x + dx[i];
                 int ny = y + dy[i];
 
-                if (nx < 0 || ny < 0 || nx > maps[0].length - 1 || ny > maps.length - 1) {
-                    continue;
-                }
+                if (nx < 0 || ny < 0 || nx > maxX || ny > maxY) continue;
 
                 if (distances[nx][ny] == 0 && maps[ny][nx] == 1) {
                     distances[nx][ny] = distances[x][y] + 1;
@@ -56,7 +58,7 @@ public class GameMapShortestDistance extends Problem {
             }
         }
 
-        int distance = distances[maps[0].length - 1][maps.length - 1];
+        int distance = distances[maxX][maxY];
 
         return distance == 0 ? -1 : distance;
     }
