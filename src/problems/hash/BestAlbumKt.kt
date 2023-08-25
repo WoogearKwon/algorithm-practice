@@ -25,16 +25,14 @@ class BestAlbumKt : Problem() {
 
         val sortedMap = map
             .toList()
-            .sortedBy { (_, value) -> value }
-            .reversed()
+            .sortedByDescending { (_, value) -> value }
             .toMap()
 
         val result = mutableListOf<Int>()
         sortedMap.keys.forEach { genre ->
             val filteredMusics = musics
                 .filter { it.genre == genre }
-                .sortedBy { it.id }
-                .reversed()
+                .sortedByDescending { it.id }
                 .sortedBy { it.playCount }
                 .reversed()
 
@@ -43,6 +41,14 @@ class BestAlbumKt : Problem() {
         }
 
         return result.toIntArray()
+    }
+
+    private fun sol(genres: Array<String>, plays: IntArray): IntArray {
+        return genres.indices.groupBy { genres[it] }.toList()
+            .sortedByDescending { it.second.sumBy { plays[it] } }
+            .map{ it.second.sortedByDescending { plays[it] }.take(2) }
+            .flatten().toList()
+            .toIntArray()
     }
 
     private data class Music(
