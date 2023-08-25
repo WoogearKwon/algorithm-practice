@@ -17,7 +17,7 @@ class BoxerRank : Problem() {
     }
 
     /**
-     * 10개 중 2개 성공
+     * 10개 중 6개 성공
      * */
     fun solution(n: Int, results: Array<IntArray>): Int {
         val winnerGraph: MutableList<MutableSet<Int>> = mutableListOf()
@@ -53,7 +53,7 @@ class BoxerRank : Problem() {
         winnerGraph.forEachIndexed { index, ints ->
             val winnerSize = winnerGraph[index].size
             val loserSize = loserGraph[index].size
-            if (winnerSize + loserSize == results.size - 1) {
+            if (winnerSize + loserSize == n - 1) {
                 answer += 1
             }
         }
@@ -61,7 +61,7 @@ class BoxerRank : Problem() {
         return answer
     }
 
-        companion object {
+    companion object {
         private val CASES = listOf(
             TestCase(
                 n = 5, // 선수의 수
