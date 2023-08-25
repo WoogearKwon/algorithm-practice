@@ -1,6 +1,7 @@
 package problems.graph
 
 import problems.Problem
+import java.util.*
 
 /**
  * [순위, 그래프]
@@ -17,17 +18,22 @@ class BoxerRank : Problem() {
     }
 
     /**
-     * 10개 중 6개 성공
+     * 10개 중 6개 성공, 4개 시간초과
      * */
+
+    private val graph: MutableList<MutableSet<Int>> = mutableListOf()
+
     fun solution(n: Int, results: Array<IntArray>): Int {
         val winnerGraph: MutableList<MutableSet<Int>> = mutableListOf()
         val loserGraph: MutableList<MutableSet<Int>> = mutableListOf()
+        val visited = BooleanArray(n + 1)
 
         var answer = 0
 
         for (i in 0 .. n) {
             winnerGraph.add(mutableSetOf())
             loserGraph.add(mutableSetOf())
+            graph.add(mutableSetOf())
         }
 
         results.forEach { match ->
@@ -35,30 +41,48 @@ class BoxerRank : Problem() {
             val loser = match[1]
 
             winnerGraph[winner].add(loser)
-            loserGraph[loser].add(winner)
         }
 
-        winnerGraph.forEach { playersSet ->
-            playersSet.toList().forEach { player ->
-                playersSet.addAll(winnerGraph[player])
+        for (i in 1 .. n) {
+            dfs(i, winnerGraph, visited)
+        }
+
+        graph.forEachIndexed { i, set ->
+            set.forEach {
+                loserGraph[it].add(i)
             }
         }
 
-        loserGraph.forEach { playerSet ->
-            playerSet.toList().forEach { player ->
-                playerSet.addAll(loserGraph[player])
-            }
-        }
-
-        winnerGraph.forEachIndexed { index, ints ->
-            val winnerSize = winnerGraph[index].size
-            val loserSize = loserGraph[index].size
-            if (winnerSize + loserSize == n - 1) {
-                answer += 1
-            }
+        graph.forEachIndexed { index, set ->
+            if (set.size + loserGraph[index].size == n - 1) answer += 1
         }
 
         return answer
+    }
+
+    private fun dfs(
+        index: Int,
+        set: List<Set<Int>>,
+        visited: BooleanArray
+    ) {
+        visited[index] = true
+
+        val stack = Stack<Int>()
+        stack.add(index)
+
+        while (stack.isNotEmpty()) {
+            val i = stack.pop()
+            val players = set[i]
+            graph[index].addAll(players)
+
+            players.forEach { player ->
+                if (visited[player]) {
+                    graph[index].addAll(graph[player])
+                } else {
+                    stack.add(player)
+                }
+            }
+        }
     }
 
     companion object {
