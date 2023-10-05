@@ -78,6 +78,7 @@ public class Main {
 
         problems.put(41, new BoxerRank());
         problems.put(42, new Pokemon());
+
         // 가장 최근에 추가된 문제 실행
         problems.get(problems.size() - 1).run();
     }
