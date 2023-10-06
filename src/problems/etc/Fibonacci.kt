@@ -11,10 +11,10 @@ class Fibonacci : Problem() {
     // 0, 1, 1, 2, 3, 5, 8, 13, 21...
     override fun run() {
         val startTime = System.currentTimeMillis()
-        val n = 44
+        val n = 10
         array = LongArray(n + 1)
 
-        val result = dpFib(n)
+        val result = fib(n)
         printResult("result = $result")
 
         val endTime = System.currentTimeMillis()
@@ -27,10 +27,10 @@ class Fibonacci : Problem() {
      * 40이 넘어가면 심각하게 속도 저하
      * 중복되는 연산이 기하급수적으로 많아지기 때문
      * */
-    private fun fibo(n: Int): Long {
+    private fun fib(n: Int): Long {
         if (n == 0 || n == 1) return 1L
 
-        return fibo(n - 1) + fibo(n - 2)
+        return fib(n - 1) + fib(n - 2)
     }
 
     /**
